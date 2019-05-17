@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../css/general.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- due to chrome bug 
+  https://stackoverflow.com/questions/14389566/stop-css3-transition-from-firing-on-page-load
+  -->
+  <script> </script>
+  <!-- due to chrome bug -->
+
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <div class="header-title secondary">Stat</div>
+      <div class="header-link"></div>
+    </div>
+    <div class="main">
+      <div class="year-view">
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">2019</span>
+          <span class="year-view_item--month">Jan</span>
+        </a>
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">2019</span>
+          <span class="year-view_item--month">Feb</span>
+        </a>
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">2019</span>
+          <span class="year-view_item--month">Mar</span>
+        </a>
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">2019</span>
+          <span class="year-view_item--month">Apr</span>
+        </a>
+        <a href="#" class="year-view_item active">
+          <span class="year-view_item--year">2019</span>
+          <span class="year-view_item--month">May</span>
+        </a>
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">2019</span>
+          <span class="year-view_item--month">Jun</span>
+        </a>
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">2019</span>
+          <span class="year-view_item--month">Jul</span>
+        </a>
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">2019</span>
+          <span class="year-view_item--month">Aug</span>
+        </a>
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">2019</span>
+          <span class="year-view_item--month">Sep</span>
+        </a>
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">2019</span>
+          <span class="year-view_item--month">Oct</span>
+        </a>
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">2019</span>
+          <span class="year-view_item--month">Nov</span>
+        </a>
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">2019</span>
+          <span class="year-view_item--month">Dec</span>
+        </a>
+      </div>
+      <div class="graph-view card">
+      </div>
+      <div class="stat-block">
+        <div class="stat-block-income stat-block-card card">
+          <div class="icon"><img src="../images/chevron-left.svg" alt=""/></div>
+          <div class="stat-block-details">
+            <span class="stat-block-details-title">Income</span>
+            <span class="stat-block-details-value"><span>$</span><span>6,593.75</span></span>          
+          </div>
+        </div>
+        <div class="stat-block-expense stat-block-card card">
+           <div class="icon chevron-right"><img src="../images/chevron-left.svg" alt=""/></div>
+          <div class="stat-block-details">
+            <span class="stat-block-details-title">Expense</span>
+            <span class="stat-block-details-value"><span>$</span><span>2,645.50</span></span>          
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="overlay"></div>
+      <div class="footer-nav">
+        <a href="#" class="calendar"><span>Daily</span></a>
+        <a href="#" class="active graph"><span>Stat</span></a>
+        <a href="#" class="main-menu plus"></a>
+        <a href="#" class="budget"><span>Budget</span></a>
+        <a href="#" class="user"><span>Profile</span></a>
+        <div class="zoom-menu-nav card">
+        <a href="#"><span class="plus"></span>Add Transaction</a>
+        <a href="#" class="calendar"><span>Daily</span></a>
+        <a href="#" class="graph"><span>Stat</span></a>
+        <a href="#" class="budget"><span>Budget</span></a>
+        <a href="#" class="user"><span>Profile</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script>
+  let toggleBtn = document.querySelector('.footer-nav .main-menu');
+  let zoomNav = document.querySelector('.zoom-menu-nav');
+  let overlay = document.querySelector('.overlay');
+  toggleBtn.addEventListener('click', function () {
+    setTimeout(()=> {
+      toggleBtn.classList.toggle('menu-opened');
+    }, 600);
+    zoomNav.classList.toggle('menu-opened');
+    overlay.classList.toggle('active');
+  });
+</script>
+
+
+</body>
+</html>

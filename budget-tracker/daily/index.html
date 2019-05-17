@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Daily</title>
+  <link rel="stylesheet" href="../css/general.css">
+  <link rel="stylesheet" href="../dashboard/style.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- due to chrome bug 
+  https://stackoverflow.com/questions/14389566/stop-css3-transition-from-firing-on-page-load
+  -->
+  <script> </script>
+  <!-- due to chrome bug -->
+
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <div class="header-title secondary">Daily Transaction</div>
+      <div class="header-link"></div>
+    </div>
+    <div class="main">
+      <div class="year-view daily-view">
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">Sun</span>
+          <span class="year-view_item--month">28</span>
+        </a>
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">Mon</span>
+          <span class="year-view_item--month">29</span>
+        </a>
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">Tue</span>
+          <span class="year-view_item--month">30</span>
+        </a>
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">Wed</span>
+          <span class="year-view_item--month">1</span>
+        </a>
+        <a href="#" class="year-view_item active">
+          <span class="year-view_item--year">Thu</span>
+          <span class="year-view_item--month">2</span>
+        </a>
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">Fri</span>
+          <span class="year-view_item--month">3</span>
+        </a>
+        <a href="#" class="year-view_item">
+          <span class="year-view_item--year">Sat</span>
+          <span class="year-view_item--month">4</span>
+        </a>
+      </div>
+      <div class="daily-transaction-view">
+        <div class="daily-transaction-view-row">
+          <div class="daily-transaction-view-col">
+            <span class="icon-daily"></span>
+          </div>
+          <div class="daily-transaction-view-col flex bordered">
+            <span class="daily-trasaction-view-col-title">Ismail Vittal</span>
+            <span class="daily-trasaction-view-col-time">Fri 1:33 PM</span>
+          </div>
+          <div class="daily-transaction-view-col transaction-amount bordered">
+            <span>$</span><span>340.20</span>
+          </div>
+        </div>
+
+        <div class="daily-transaction-view-row">
+          <div class="daily-transaction-view-col">
+            <span class="icon-daily"></span>
+          </div>
+          <div class="daily-transaction-view-col flex bordered">
+            <span class="daily-trasaction-view-col-title">Brack Obama :/</span>
+            <span class="daily-trasaction-view-col-time">Thu 10:20 AM</span>
+          </div>
+          <div class="daily-transaction-view-col transaction-amount bordered">
+            <span>$</span><span>10.00</span>
+          </div>
+        </div>
+
+
+
+        <div class="daily-transaction-view-row">
+          <div class="daily-transaction-view-col">
+            <span class="icon-daily"></span>
+          </div>
+          <div class="daily-transaction-view-col flex bordered">
+            <span class="daily-trasaction-view-col-title">Narendra Modi :)</span>
+            <span class="daily-trasaction-view-col-time">Wed 9:20 PM</span>
+          </div>
+          <div class="daily-transaction-view-col transaction-amount bordered">
+            <span>$</span><span>1.00</span>
+          </div>
+        </div>
+
+
+
+        <div class="daily-transaction-view-row">
+          <div class="daily-transaction-view-col">
+            <span class="icon-daily"></span>
+          </div>
+          <div class="daily-transaction-view-col flex bordered">
+            <span class="daily-trasaction-view-col-title">Nabeel Putthanpeediyakkal</span>
+            <span class="daily-trasaction-view-col-time">Mon 10:10 AM</span>
+          </div>
+          <div class="daily-transaction-view-col transaction-amount bordered">
+            <span>$</span><span>40.40</span>
+          </div>
+        </div>
+
+
+        <div class="daily-transaction-view-row total-transaction-view">
+          <div class="daily-transaction-view-col">
+          </div>
+          <div class="daily-transaction-view-col flex">
+            <span class="daily-trasaction-view-col-title">Total</span>
+          </div>
+          <div class="daily-transaction-view-col transaction-amount">
+            <span>$</span><span>40.40</span>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="footer">
+      <div class="overlay"></div>
+      <div class="footer-nav">
+        <a href="#" class="calendar"><span>Daily</span></a>
+        <a href="#" class="active graph"><span>Stat</span></a>
+        <a href="#" class="main-menu plus"></a>
+        <a href="#" class="budget"><span>Budget</span></a>
+        <a href="#" class="user"><span>Profile</span></a>
+        <div class="zoom-menu-nav card">
+        <a href="#"><span class="plus"></span>Add Transaction</a>
+        <a href="#" class="calendar"><span>Daily</span></a>
+        <a href="#" class="graph"><span>Stat</span></a>
+        <a href="#" class="budget"><span>Budget</span></a>
+        <a href="#" class="user"><span>Profile</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script>
+  let toggleBtn = document.querySelector('.footer-nav .main-menu');
+  let zoomNav = document.querySelector('.zoom-menu-nav');
+  let overlay = document.querySelector('.overlay');
+  toggleBtn.addEventListener('click', function () {
+    setTimeout(()=> {
+      toggleBtn.classList.toggle('menu-opened');
+    }, 600);
+    zoomNav.classList.toggle('menu-opened');
+    overlay.classList.toggle('active');
+  });
+</script>
+
+
+</body>
+</html>

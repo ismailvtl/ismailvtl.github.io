@@ -1,0 +1,11 @@
+.otp-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.otp-inputs > input {
+    width: 20%;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+}

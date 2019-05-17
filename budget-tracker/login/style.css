@@ -1,0 +1,95 @@
+.login-container {
+    position: relative;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container .login-container-image {
+    height: 130px;
+    width: 130px;
+}
+
+.login-container .login-container-image > img {
+    height: 100%;
+    width: 100%;
+}
+
+.login-container .login-container-title {
+    padding: 20px 0px 50px 0px;
+}
+
+.login-container .login-container-title h1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.login-container .login-container-formgroup {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container .login-container-forminput--input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-container .login-container-formgroup--button {
+    width: 100;
+}
+
+.login-container .login-container-formgroup label {
+    margin-bottom: 5px;
+    color: var(--label);
+    letter-spacing: 0.8px;
+}
+
+
+.login-container-formgroup input {
+    border: none;
+    border-bottom: 1px solid var(--grey);
+    box-sizing: border-box;
+    padding: 8px 0px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: inherit;
+}
+
+.login-container-formgroup input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: var(--primary-text-color);
+}
+.login-container-formgroup input::-moz-placeholder { /* Firefox 19+ */
+  color: var(--primary-text-color);
+}
+.login-container-formgroup input:-ms-input-placeholder { /* IE 10+ */
+  color: var(--primary-text-color);
+}
+.login-container-formgroup input:-moz-placeholder { /* Firefox 18- */
+  color: var(--primary-text-color);
+}
+
+.login-container-formgroup input:focus, .login-container-forminput--button button:focus {
+  outline: none;
+}
+
+.login-container-forminput--button {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.login-container-forminput--button button {
+    width: 90%;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    min-height: 60px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}

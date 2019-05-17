@@ -1,0 +1,110 @@
+:root {
+    --green: #46bf6d;
+    --daily-icon-bg: #f3f0f8;
+}
+
+.daily-view {
+    justify-content: space-between;
+}
+.daily-view span.year-view_item--month {
+    border-radius:50%;
+    min-width: 20px;
+    text-align: center;
+}
+
+.daily-view a.year-view_item {
+    min-width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.daily-transaction-view {
+  height: calc(100%);
+    width: 90%;
+    margin: 20px auto;
+    overflow: auto;
+}
+
+.daily-transaction-view-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.daily-transaction-view-row:first-child {
+    margin-top: 0;
+}
+
+.daily-transaction-view-col {
+    min-width: 52px;
+}
+
+.icon-daily {
+    background: url(../images/daily.svg) no-repeat center;
+    background-size: 60%;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: var(--daily-icon-bg);
+}
+
+.daily-transaction-view-col.flex {
+    display: flex;
+    flex-direction: column;
+    width: calc(62%);
+    margin-left: 15px;
+}
+
+
+.m10 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.daily-transaction-view-col.bordered {
+    border-bottom: 1px solid var(--dark-grey);
+}
+
+.daily-trasaction-view-col-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.daily-trasaction-view-col-time {
+    color: var(--dark-grey);
+}
+
+
+.daily-transaction-view-col.transaction-amount {
+    width: 32%;
+    text-align: right;
+}
+
+.daily-trasaction-view-col-title, .daily-transaction-view-col.transaction-amount span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-text-color);
+}
+
+.daily-transaction-view-col.transaction-amount span {
+  color: var(--green);
+}
+
+.total-transaction-view .daily-trasaction-view-col-title {
+    color: var(--dark-grey);
+    font-weight: 500;
+}
+
+.total-transaction-view .transaction-amount span{
+    color: var(--primary-text-color);
+    font-size: 1.6rem;
+}
+
+.total-transaction-view .daily-transaction-view-col {
+    justify-content: center;
+}
