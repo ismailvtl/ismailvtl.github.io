@@ -108,3 +108,8 @@
 .total-transaction-view .daily-transaction-view-col {
     justify-content: center;
 }
+
+.daily-view a.year-view_item:last-child {
+    margin-right: 0;
+    padding-right: 0;
+}
