@@ -87,7 +87,7 @@
 
 .daily-trasaction-view-col-title, .daily-transaction-view-col.transaction-amount span {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--primary-text-color);
 }
 
