@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add Account</title>
+  <link rel="stylesheet" href="../css/general.css">
+  <link rel="stylesheet" href="../login/style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <div class="header-title secondary">Add account</div>
+      <div class="header-link"></div>
+    </div>
+    <div class="main white-bg">
+      <div class="login-container add-account">
+        <div class="login-container-image add-account-logo">
+          <img src="../images/add-account.svg" />
+        </div>
+        <div class="login-container-title">
+          <h1>Add primary bank account</h1>
+        </div>
+        <div class="login-container-formgroup mb30">
+          <span class="label" for="accname">Select color</span>
+          <div class="color-group">
+            <div class="color-group-item">
+              <label for="color-1" class="color one"><input type="radio" name="color" id="color-1" /></label>
+              <label for="color-2" class="color two"><input type="radio" name="color" id="color-2" /></label>
+              <label for="color-3" class="color three"><input type="radio" name="color" id="color-3" /></label>
+              <label for="color-4" class="color four"><input type="radio" name="color" id="color-4" /></label>
+              <label for="color-5" class="color five"><input type="radio" name="color" id="color-5" /></label>
+              <label for="color-6" class="color six"><input type="radio" name="color" id="color-6" /></label>
+              <label for="color-7" class="color seven"><input type="radio" name="color" id="color-7" /></label>
+            </div>
+          </div>
+        </div>
+        <div class="login-container-formgroup mb30">
+          <label for="accname">Account name</label>
+          <input type="text" id="accname" placeholder="Standard Chartered Bank"/>
+        </div>
+        <div class="login-container-formgroup mb30">
+          <div class="login-container-forminput--input">
+            <label for="startamount">Started amount (in $)</label>
+            <input type="text" id="startamount" value="4500" />
+          </div>
+        </div>
+        <div class="login-container-formgroup mb30">
+         <div class="login-container-forminput--button">
+            <button type="button">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

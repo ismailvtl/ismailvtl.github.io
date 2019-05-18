@@ -1,0 +1,88 @@
+.login-container .add-account-logo {
+    height: 80px;
+    width: 80px;
+}
+
+.login-container.add-account .login-container-title {
+    padding-bottom: 20px;
+}
+
+.login-container-formgroup .label {
+    margin-bottom: 5px;
+    color: var(--label);
+    letter-spacing: 0.8px;
+}
+
+.color-group-item {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.color-group-item label {
+    margin-right: 20px;
+    position: relative;
+    margin-top: 5px;
+}
+
+.color-group-item input[type="radio"] {
+    height: 24px;
+    width: 24px;
+    position: relative;
+    display: flex;
+}
+
+.color-group-item input[type="radio"]:after {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    left: -2px;
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px var(--light-grey);
+    top: -2px;
+}
+
+.color-group-item input[type="radio"]:checked:after {
+   border : 2px solid var(--primary-text-color);
+   box-shadow: 0 0 10px 1px #868686;
+}
+
+.add-account .mb10 {
+    margin-bottom: 10px;
+}
+.add-account .mb30 {
+    margin-bottom: 30px;
+}
+
+.color input[type="radio"]:after {
+    background-repeat: no-repeat;
+}
+
+.color.one input[type="radio"]:after {
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+.color.two input[type="radio"]:after {
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+}
+
+.color.three input[type="radio"]:after {
+    background-image: linear-gradient(to top, #0fd850 0%, #f9f047 100%);
+}
+
+.color.four input[type="radio"]:after {
+    background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+}
+
+.color.five input[type="radio"]:after {
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+
+.color.six input[type="radio"]:after {
+    background-image: linear-gradient(to top, #007adf 0%, #00ecbc 100%);
+}
+
+.color.seven input[type="radio"]:after {
+    background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+}
