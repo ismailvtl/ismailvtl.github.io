@@ -44,8 +44,8 @@
 }
 
 .color-group-item input[type="radio"]:checked:after {
-   border : 2px solid var(--primary-text-color);
-   box-shadow: 0 0 10px 1px #868686;
+   border : 2px solid var(--white);
+   box-shadow: 0 0 10px 1px var(--dark-grey);
 }
 
 .add-account .mb10 {
