@@ -111,7 +111,7 @@ function read() {
 	      let d = new Date();
 	     console.log(m);
 	     let dt1 = new Date(m[0],m[1],m[2]);
-	      let dt2 = new Date(d.getFullYear(), d.getMonth(), d.getDay());
+	      let dt2 = new Date(d.getFullYear(), d.getMonth() + 1, d.getDay());
              let mon = diff_months(dt1, dt2);
        exd.innerHTML += `<div class="exd-row"><span>${data.title}</span><span>${data.amount}</span><span>Months Left: ${mon}</span></div>`
       });
@@ -130,7 +130,7 @@ function closeAddView() {
 
 function diff_months(dt2, dt1) 
  {
-  var diff =(dt2.getTime() - dt1.getTime()) / 1000;
+  var diff =(dt2.getTime() - dt1.getTime()) / 2000;
    diff /= (60 * 60 * 24 * 7 * 4);
   return Math.abs(Math.round(diff));
   
