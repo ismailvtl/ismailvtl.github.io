@@ -60,7 +60,7 @@ function signOut() {
 }
 
 function add() {
-  console.log("inside add");
+  console.log("inside add", lname, ldate, lamount);
   var active = dataBase.result;
   var data = active.transaction(["loan"], "readwrite");
   var objectDb = data.objectStore("loan");
