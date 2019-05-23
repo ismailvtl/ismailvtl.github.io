@@ -114,9 +114,10 @@ function add() {
 }
 
 function read() {
+  var db = dataBase.result;
   var transaction = db.transaction(["loan"]);
-  var objectStore = transaction.objectStore("loan");
-  var request = objectStore.get(profile.getId());
+  var objectDb = transaction.objectStore("loan");
+  var request = objectDb.get(profile.getId());
 
   request.onerror = function(event) {
   alert("Unable to retrieve data from database!");
