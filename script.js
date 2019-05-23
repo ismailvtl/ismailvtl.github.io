@@ -63,7 +63,7 @@ function add() {
   var active = dataBase.result;
   var data = active.transaction(["loan"], "readwrite");
   var objectDb = data.objectStore("loan");
-  if (document.querySelector("#lname").value.length && document.querySelector("#amount").value.length && document.querySelector("#lname").value.length) {
+  if (document.querySelector("#lname").value.length && document.querySelector("#lamount").value.length && document.querySelector("#ldate").value.length) {
     var request = objectDb.put({
       userid: profile.getId(),
       title: document.querySelector("#lname").value,
@@ -80,8 +80,8 @@ function add() {
       document.querySelector("#lamount").value = "";
       document.querySelector("#ldate").value = "";
       console.log("added");
+      read();
     };
-    read();
   } else {
     alert("details cannot be blank");
   }
