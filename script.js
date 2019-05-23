@@ -2,7 +2,6 @@ let profile = null;
 let exd = document.querySelector('#exd');
 let userDiv = document.querySelector('#user');
 let logoutBtn = document.querySelector('.logout-btn');
-let readBtn = document.querySelector('.read-btn');
 let userDetailsDiv = document.querySelector('#user-details');
 let addDataDiv = document.querySelector('#add-data');
 let signinButton = document.querySelector('.g-signin2');
@@ -39,7 +38,6 @@ function onSignIn(googleUser) {
   console.log('Email: ' + profile.getEmail());
   userDiv.innerHTML = profile.getName();
   logoutBtn.classList.add('visible');
-  readBtn.classList.add('visible');
   userDetailsDiv.classList.add('visible');
   addDataDiv.classList.add('visible');
   signinButton.style.display ='none';
@@ -54,7 +52,6 @@ function signOut() {
       userDetailsDiv.classList.remove('visible');
       logoutBtn.classList.remove('visible');
       addDataDiv.classList.remove('visible');
-      readBtn.classList.remove('visible');
       exd.innerHTML='';
     });
 }
