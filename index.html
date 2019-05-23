@@ -29,40 +29,29 @@
 
 <a href="#" class="logout-btn" onclick="signOut();">Sign out</a>
 <script>
-
-//prefixes of implementation that we want to test
-window.indexedDB = window.indexedDB || window.mozIndexedDB || 
-window.webkitIndexedDB || window.msIndexedDB;
-
-//prefixes of window.IDB objects
-window.IDBTransaction = window.IDBTransaction || 
-window.webkitIDBTransaction || window.msIDBTransaction;
-window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || 
-window.msIDBKeyRange
-
-if (!window.indexedDB) {
-window.alert("Your browser doesn't support a stable version of IndexedDB.")
-}
-// Open (or create) the database
-let db;
-let request = indexedDB.open("loan-tracker", 1);
 let profile = null;
 
-request.onerror = function(event) {
-  console.log("error: ");
+var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+var dataBase = null;
+
+dataBase = indexedDB.open("loanTracker", 1);
+dataBase.onupgradeneeded = function (e) {
+	var active = dataBase.result;
+	var objectDb = active.createObjectStore("loan", {keyPath: 'id'});
+	objectDb.createIndex('index_id','id', {unique : false});
+  objectDb.createIndex('index_title','title', {unique : false});
+  objectDb.createIndex('index_amount','amount', {unique : false});
+  objectDb.createIndex('index_maturity','maturity', {unique : false});
 };
 
-request.onsuccess = function(event) {
-  db = request.result;
-  console.log("success: "+ db);
+dataBase.onsuccess = function (e) {
+alert("success");
 };
 
-/*
-request.onupgradeneeded = function(event) {
-  var db = event.target.result;
-  var objectStore = db.createObjectStore("loan", {keyPath: "id"});
-  console.log(objectStore);
-}*/
+dataBase.onerror = function (e) {
+alert("error");
+};
+
 
 function onSignIn(googleUser) {
   profile = googleUser.getBasicProfile();
@@ -90,20 +79,28 @@ function signOut() {
 }
 
 function add() {
-  let lname = document.querySelector('#lname').value;
-  let lamount = document.querySelector('#lamount').value;
-  let ldate = document.querySelector('#ldate').value;
-  var request = db.transaction(["loan"], 'readwrite')
-  .objectStore("loan")
-  .add({ id: profile.getId(), name:  lname , amount: lamount, ldate: ldate });
+  console.log("inside add");
+  var active = dataBase.result;
+  var data = active.transaction(["loan"], "readwrite");
+  var objectDb = data.objectStore("loan");
 
-  request.onsuccess = function(event) {
-      alert("added to your database.");
+  var request = objectDb.put({
+    id: profile.getId(),
+    title: document.querySelector("#lname").value,
+    amount: document.querySelector("#lamount").value,
+    maturity: document.querySelector("#ldate").value
+  });
+
+  request.onerror = function (e) {
+    console.log(request.error.name + '\n\n' + request.error.message);
   };
 
-  request.onerror = function(event) {
-      alert("Unable to add");
-  }
+  data.oncomplete = function (e) {
+    document.querySelector("#lname").value = "";
+    document.querySelector("#lamount").value = "";
+    document.querySelector("#ldate").value = "";
+    console.log("Objeto agregado correctamente");
+  };
 }
 </script>
 </body>
