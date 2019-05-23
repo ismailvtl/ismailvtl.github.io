@@ -77,3 +77,17 @@ div#add-data {
     padding: 20px;
     background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
 }
+
+
+button.show-add-view {
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    border: none;
+    font-size: 34px;
+    color: #FFF;
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+}
