@@ -62,28 +62,22 @@ function signOut() {
 }
 
 function createDBandAdd() {
-console.log("clicked on add", open);
-  open.onsuccess = function() {
-    let db = open.result;
-    console.log("inside open and db details", db);
-    let lname = document.querySelector('#lname').value;
-    let lamount = document.querySelector('#lamount').value;
-    let ldate = document.querySelector('#ldate').value;
-    if(lname.length > 0 && lamount.length > 0 && ldate.length > 0) {
-       console.log("inside if");
-      let tx = db.transaction("MyObjectStore", "readwrite");
-      let store = tx.objectStore("MyObjectStore");
-      store.put({id: profile.getId(), lname: lname, lamount: lamount, ldate: ldate});
-      let details = store.get(profile.getId());     
-      details.onsuccess = function() {
-        console.log(details.result.id, details.result.lname, details.result.lamount, details.result.ldate);
-      };
-      tx.oncomplete = function() {
-          db.close();
-      }
-    } else {
-      alert("details cannot be blank");
-    }
+  console.log("clicked on add", open);
+  let lname = document.querySelector('#lname').value;
+  let lamount = document.querySelector('#lamount').value;
+  let ldate = document.querySelector('#ldate').value;
+  let details = null;
+  if(lname.length > 0 && lamount.length > 0 && ldate.length > 0) {
+      console.log("inside if");
+    let tx = db.transaction("MyObjectStore", "readwrite");
+    let store = tx.objectStore("MyObjectStore");
+    store.add({id: profile.getId(), lname: lname, lamount: lamount, ldate: ldate});    
+  } else {
+    alert("details cannot be blank");
+  }
+
+  tx.onsuccess = function() {
+    console.log("added", details.result.id, details.result.lname, details.result.lamount, details.result.ldate);
   }
 }
 </script>
