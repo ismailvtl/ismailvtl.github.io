@@ -54,6 +54,7 @@ function signOut() {
       logoutBtn.classList.remove('visible');
       addDataDiv.classList.remove('visible');
       exd.innerHTML='';
+	    document.body.classList.remove('loggedin');
     });
 }
 
