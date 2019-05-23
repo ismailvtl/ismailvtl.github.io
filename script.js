@@ -39,7 +39,7 @@ function onSignIn(googleUser) {
   userDiv.innerHTML = profile.getName();
   logoutBtn.classList.add('visible');
   userDetailsDiv.classList.add('visible');
-  addDataDiv.classList.add('visible');
+  //addDataDiv.classList.add('visible');
   signinButton.style.display ='none';
   read();
 }
