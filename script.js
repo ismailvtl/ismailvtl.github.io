@@ -44,6 +44,7 @@ function onSignIn(googleUser) {
   userDetailsDiv.classList.add('visible');
   addDataDiv.classList.add('visible');
   signinButton.style.display ='none';
+  read();
 }
 
 function signOut() {
