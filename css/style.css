@@ -105,11 +105,16 @@ button.show-add-view {
 .side-view {
     position: fixed;
     height: 100%;
-    width: 80%;
+    width: 90%;
     background: #252525;
-    z-index: 0999;
+    z-index: 999;
     top: 0;
-    right: 0;
+    right: calc(0% - 100%);
+    transition: linear 0.3s;
+}
+
+.side-view.open {
+    right: calc(90% - 100%);
 }
 
 .side-view ul {
