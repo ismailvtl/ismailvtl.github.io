@@ -84,12 +84,15 @@ function add() {
   var active = dataBase.result;
   var data = active.transaction(["loan"], "readwrite");
   var objectDb = data.objectStore("loan");
+  var lname = document.querySelector("#lname").value;
+  var lamount = document.querySelector("#lamount").value;
+  var ldate =  document.querySelector("#ldate").value;
   if (lname.length > 0 && lamount.length > 0 && ldate.length > 0) {
     var request = objectDb.put({
       userid: profile.getId(),
-      title: document.querySelector("#lname").value,
-      amount: document.querySelector("#lamount").value,
-      maturity: document.querySelector("#ldate").value
+      title: lname,
+      amount: lamount,
+      maturity: ldate
     });
 
     request.onerror = function (e) {
