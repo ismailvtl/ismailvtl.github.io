@@ -90,7 +90,7 @@ function add() {
 }
 
 function read() {
-  let db = db.result;
+	console.log(db);
   let transaction = db.transaction(["loan"]);
   let objectDb = transaction.objectStore("loan");
   let index = objectDb.index('index_userid');
