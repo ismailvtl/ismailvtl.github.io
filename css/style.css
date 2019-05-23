@@ -1,4 +1,8 @@
-    body{font: 18px system-ui, -apple-system, Helvetica, sans-serif;
+html{
+    scroll-behavior: smooth;
+}
+
+body{font: 18px system-ui, -apple-system, Helvetica, sans-serif;
     position: fixed;
     height: 100%;
     width: 100%;
