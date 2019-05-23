@@ -60,17 +60,15 @@ function add() {
   let lname = document.querySelector("#lname").value;
   let lamount = document.querySelector("#lamount").value
   let ldate =  document.querySelector("#ldate").value;
-  console.log("inside add", lname.value, ldate.value, lamount.value);
   var active = dataBase.result;
   var data = active.transaction(["loan"], "readwrite");
   var objectDb = data.objectStore("loan");
-  if (lname.length > 0 && lamount.length > 0 && ldate.length > 0) {
-    console.log("inside length check")
+  if (document.querySelector("#lname").value.length && document.querySelector("#amount").value.length && document.querySelector("#lname").value.length) {
     var request = objectDb.put({
       userid: profile.getId(),
-      title: lname,
-      amount: lamount,
-      maturity: ldate
+      title: document.querySelector("#lname").value,
+      amount: document.querySelector("#lamount").value,
+      maturity: document.querySelector("#ldate").value
     });
 
     request.onerror = function (e) {
@@ -78,9 +76,9 @@ function add() {
     };
 
     data.oncomplete = function (e) {
-      lname = "";
-      lamount = "";
-      ldate = "";
+      document.querySelector("#lname").value = "";
+      document.querySelector("#lamount").value = "";
+      document.querySelector("#ldate").value = "";
       console.log("added");
     };
     read();
