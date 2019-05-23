@@ -185,3 +185,10 @@ button.close-add {
     right: 20px;
     z-index: 9999;
 }
+
+div#add-data label {
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+    color: #FFF;
+}
