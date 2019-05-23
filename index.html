@@ -34,20 +34,20 @@
 let indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
 // Open (or create) the database
 let open = indexedDB.open("loan-tracker", 1);
-var profile = null;
+let profile = null;
 
 function onSignIn(googleUser) {
   profile = googleUser.getBasicProfile();
-console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-console.log('Name: ' + profile.getName());
-console.log('Image URL: ' + profile.getImageUrl());
-console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-document.querySelector('#user').innerHTML = profile.getName();
-document.querySelector('#email').innerHTML = profile.getEmail();
-document.querySelector('.logout-btn').classList.add('visible');
-document.querySelector('#user-details').classList.add('visible');
-document.querySelector('#add-data').classList.add('visible');
-document.querySelector('.g-signin2').style.display ='none';
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  document.querySelector('#user').innerHTML = profile.getName();
+  document.querySelector('#email').innerHTML = profile.getEmail();
+  document.querySelector('.logout-btn').classList.add('visible');
+  document.querySelector('#user-details').classList.add('visible');
+  document.querySelector('#add-data').classList.add('visible');
+  document.querySelector('.g-signin2').style.display ='none';
 }
 
 function signOut() {
@@ -59,29 +59,6 @@ function signOut() {
       document.querySelector('.logout-btn').classList.remove('visible');
       document.querySelector('#add-data').classList.remove('visible');
     });
-}
-
-function createDBandAdd() {
-  console.log("clicked on add", open);
-  let lname = document.querySelector('#lname').value;
-  let lamount = document.querySelector('#lamount').value;
-  let ldate = document.querySelector('#ldate').value;
-  let details = null;
-  let db = null;
-  let tx = null;
-  if(lname.length > 0 && lamount.length > 0 && ldate.length > 0) {
-      console.log("inside if");
-    db = open.result;
-    tx = db.transaction("MyObjectStore", "readwrite");
-    let store = tx.objectStore("MyObjectStore");
-    store.add({id: profile.getId(), lname: lname, lamount: lamount, ldate: ldate});    
-  } else {
-    alert("details cannot be blank");
-  }
-
-  tx.onsuccess = function() {
-    console.log("added", details.result.id, details.result.lname, details.result.lamount, details.result.ldate);
-  }
 }
 </script>
 </body>
