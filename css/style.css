@@ -1,4 +1,14 @@
-	  body{font: 18px system-ui, -apple-system, Helvetica, sans-serif;}
+    body{font: 18px system-ui, -apple-system, Helvetica, sans-serif;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    padding: 10px;
+  }
   .logout-btn, #user-details, #add-data, .read-btn { display: none }
   .visible { display : block !important}
   div#exd .exd-row {
