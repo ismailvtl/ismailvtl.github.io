@@ -89,9 +89,9 @@ function add() {
 
 function read() {
   console.log(dataBase);
-  //let db = dataBase.result;
-  //let transaction = db.transaction(["loan"]);
-  let objectDb = dataBase.result.transaction(["loan"]).objectStore("loan");
+  let db = dataBase.result;
+  let transaction = db.transaction(["loan"]);
+  let objectDb = transaction.objectStore("loan");
   let index = objectDb.index('index_userid');
   let request = index.getAll(`${profile.getId()}`);
 
@@ -110,4 +110,20 @@ function read() {
   };
 }
 
-read();
+function onLoadRead() {
+  var objectStore = db.transaction(['loan'], "readwrite").objectStore('loan');
+  let index = objectStore.index('index_userid');
+  let request = index.getAll(`${profile.getId()}`);
+
+  request.onsuccess = function(event) {
+    exd.innerHTML='';
+    if(request.result) {
+      let arr = request.result.reverse();
+      arr.forEach(data => {
+       exd.innerHTML += `<div class="exd-row"><span>${data.title}</span><span>${data.amount}</span><span>${data.maturity}</span></div>`
+      });
+    }
+  };
+}
+
+onLoadRead();
