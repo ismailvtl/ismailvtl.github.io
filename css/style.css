@@ -114,7 +114,7 @@ div#add-data {
     left: 0;
     margin: 0;
     padding: 20px;
-    background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
+        background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
 
 
@@ -179,8 +179,8 @@ button.close-add {
     font-size: 20px;
     border-radius: 50%;
     border: 0;
-    color: #FFF;
-    background: #5d5b5b;
+        color: #000;
+    background: #ffffff;
     position: fixed;
     right: 20px;
     z-index: 9999;
