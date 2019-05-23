@@ -83,16 +83,6 @@ button#add-data-btn {
     margin-top: 20px;
   }
 
-  button#add-data-btn {
-    display: flex;
-    padding: 10px;
-    margin: auto;
-    min-width: 280px;
-    justify-content: center;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
-
 .loggedin div#user-details {
     display: flex !important;
     justify-content: space-between;
@@ -175,7 +165,7 @@ button.show-add-view {
 }
 
 button.close-add {
-    margin-bottom: 30px;
+   margin-bottom: 30px;
     display: flex;
     margin-left: auto;
     height: 40px;
@@ -185,5 +175,8 @@ button.close-add {
     border-radius: 50%;
     border: 0;
     color: #FFF;
-    background: #898989;
+    background: #5d5b5b;
+    position: fixed;
+    right: 20px;
+    z-index: 9999;
 }
