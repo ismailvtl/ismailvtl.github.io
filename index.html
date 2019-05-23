@@ -126,10 +126,10 @@ function read() {
   request.onsuccess = function(event) {
   // Do something with the request.result!
     if(request.result) {
-      //console.log(request.result);
-      request.result.forEach(data => {
-        console.log(data);
-      });
+      console.log(request.result);
+      //request.result.forEach(data => {
+       // console.log(data);
+     // });
     } else {
       console.log("nothing found for the user");
     }
