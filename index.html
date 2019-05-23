@@ -66,8 +66,8 @@ let profile = null;
 
 var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 var dataBase = null;
-
 dataBase = indexedDB.open("loanTracker", 1);
+
 dataBase.onupgradeneeded = function (e) {
 	var active = dataBase.result;
 	var objectDb = active.createObjectStore("loan", {keyPath: 'id', autoIncrement : true});
@@ -145,8 +145,7 @@ function add() {
 }
 
 function read() {
-  var db = dataBase.result;
-  var transaction = db.transaction(["loan"]);
+  var transaction = dataBase.transaction(["loan"]);
   var objectDb = transaction.objectStore("loan");
   var index = objectDb.index('index_userid');
   var request = index.getAll(`${profile.getId()}`);
