@@ -8,7 +8,7 @@
   <title>Ismail</title>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <style>
-  .logout-btn, #user-details, #add-data { display: none }
+  .logout-btn, #user-details, #add-data, .read-btn { display: none }
   .visible { display : block !important}
   div#exd .exd-row {
     display: flex;
@@ -84,6 +84,7 @@ function onSignIn(googleUser) {
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   document.querySelector('#user').innerHTML = profile.getName();
   document.querySelector('.logout-btn').classList.add('visible');
+  document.querySelector('.read-btn').classList.add('visible');
   document.querySelector('#user-details').classList.add('visible');
   document.querySelector('#add-data').classList.add('visible');
   document.querySelector('.g-signin2').style.display ='none';
@@ -97,6 +98,7 @@ function signOut() {
       document.querySelector('#user-details').classList.remove('visible');
       document.querySelector('.logout-btn').classList.remove('visible');
       document.querySelector('#add-data').classList.remove('visible');
+      document.querySelector('.read-btn').classList.remove('visible');
     });
 }
 
