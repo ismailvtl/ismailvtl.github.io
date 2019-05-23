@@ -12,9 +12,12 @@ body{font: 18px system-ui, -apple-system, Helvetica, sans-serif;
   }
 
 body.loggedin .g-signin2 {
-    display: none;
+    display: none !important;
 }
-
+.g-signin2 {
+   display: flex;
+    justify-content: center;
+}
 h1{
 margin: 0 0 10px 0;
     color: #6b6b6b;
