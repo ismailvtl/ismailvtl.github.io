@@ -62,6 +62,7 @@ function signOut() {
 }
 
 function createDBandAdd() {
+console.log("clicked on add");
   open.onsuccess = function() {
     let db = open.result;
     let lname = document.querySelector('#lname').value;
