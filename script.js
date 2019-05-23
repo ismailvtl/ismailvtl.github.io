@@ -113,7 +113,7 @@ function read() {
 	     let dt1 = new Date(m[0],m[1],m[2]);
 	      let dt2 = new Date(d.getFullYear(), d.getMonth() + 1, d.getDay());
              let mon = diff_months(dt1, dt2);
-       exd.innerHTML += `<div class="exd-row"><span>${data.title}</span><span>${data.amount}</span><span>Months Left: ${mon}</span></div>`
+       exd.innerHTML += `<div class="exd-row"><span>${data.title}</span><span>${data.amount}</span><span>Maturity Date: ${data.maturity} ( ${mon} months left )</span></div>`
       });
     }
   };
