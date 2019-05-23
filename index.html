@@ -40,7 +40,7 @@ var dataBase = null;
 dataBase = indexedDB.open("loanTracker", 1);
 dataBase.onupgradeneeded = function (e) {
 	var active = dataBase.result;
-	var objectDb = active.createObjectStore("loan", {keyPath: 'userid'});
+	var objectDb = active.createObjectStore("loan", {keyPath: 'id', autoIncrement : true});
   objectDb.createIndex('index_recordid','id', {unique : true});
 	objectDb.createIndex('index_userid','userid', {unique : false});
   objectDb.createIndex('index_title','title', {unique : false});
@@ -92,7 +92,6 @@ function add() {
   var ldate =  document.querySelector("#ldate").value;
   if (lname.length > 0 && lamount.length > 0 && ldate.length > 0) {
     var request = objectDb.put({
-      id: Math.floor(Math.random() * 9999),
       userid: profile.getId(),
       title: lname,
       amount: lamount,
@@ -118,8 +117,8 @@ function read() {
   var db = dataBase.result;
   var transaction = db.transaction(["loan"]);
   var objectDb = transaction.objectStore("loan");
-  var request = objectDb.get(`${profile.getId()}`);
-
+  var index = objectDb.index('index_userid');
+  var request = index.get(`${profile.getId()}`);
   request.onerror = function(event) {
   alert("Unable to retrieve data from database!");
   };
