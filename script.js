@@ -88,6 +88,7 @@ function add() {
 }
 
 function read() {
+	console.log(dataBase);
   let db = dataBase.result;
   let transaction = db.transaction(["loan"]);
   let objectDb = transaction.objectStore("loan");
