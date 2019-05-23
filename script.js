@@ -88,8 +88,8 @@ function add() {
 }
 
 function read() {
-  var db = dataBase.result;
-  var transaction = db.transaction(["loan"]);
+  //var db = dataBase.result;
+  var transaction = dataBase.transaction(["loan"]);
   var objectDb = transaction.objectStore("loan");
   var index = objectDb.index('index_userid');
   var request = index.getAll(`${profile.getId()}`);
