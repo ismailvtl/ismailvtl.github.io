@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="google-signin-client_id" content="181958364835-d0selc31bcj6qqg0igbsam6tgpi9m9q9.apps.googleusercontent.com">
   <title>Ismail</title>
@@ -30,6 +30,16 @@
   div#add-data {
     margin-top: 20px;
   }
+
+  button#add-data-btn {
+    display: flex;
+    padding: 10px;
+    margin: auto;
+    min-width: 280px;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
   </style>
 </head>
 <body>
@@ -40,7 +50,7 @@ Welcome, <span id="user"></span>
 
 <div id="add-data">
   <input type="text" id="lname" placeholder="loan name" />
-  <input type="text" id="lamount" placeholder="loan amount" />
+  <input type="number" id="lamount" placeholder="loan amount" />
   <input type="date" id="ldate" placeholder="loan maturity" />
   <button type="button" id="add-data-btn" onclick="add();">Add</button>
 </div>
@@ -128,6 +138,7 @@ function add() {
       ldate = "";
       console.log("added");
     };
+    read();
   } else {
     alert("details cannot be blank")
   }
