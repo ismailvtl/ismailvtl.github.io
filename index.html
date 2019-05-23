@@ -118,7 +118,7 @@ function read() {
   var transaction = db.transaction(["loan"]);
   var objectDb = transaction.objectStore("loan");
   var index = objectDb.index('index_userid');
-  var request = index.get(`${profile.getId()}`);
+  var request = index.getAll(`${profile.getId()}`);
   request.onerror = function(event) {
   alert("Unable to retrieve data from database!");
   };
