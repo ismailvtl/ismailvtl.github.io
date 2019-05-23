@@ -41,6 +41,7 @@ function onSignIn(googleUser) {
   userDetailsDiv.classList.add('visible');
   //addDataDiv.classList.add('visible');
   signinButton.style.display ='none';
+	document.body.classList.add('loggedin');
   read();
 }
 
