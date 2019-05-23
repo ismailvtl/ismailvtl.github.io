@@ -24,8 +24,7 @@ dataBase.onupgradeneeded = function (e) {
 
 dataBase.onsuccess = function (e) {
 console.log("success");
-db = dataBase.result;
-read(db);
+read();
 };
 
 dataBase.onerror = function (e) {
@@ -90,8 +89,8 @@ function add() {
   }
 }
 
-function read(db) {
-  console.log(db);
+function read() {
+  let db = dataBase.result;
   let transaction = db.transaction(["loan"]);
   let objectDb = transaction.objectStore("loan");
   let index = objectDb.index('index_userid');
