@@ -111,7 +111,7 @@ function read() {
 }
 
 function onLoadRead() {
-  var objectStore = db.transaction(['loan'], "readwrite").objectStore('loan');
+  var objectStore = dataBase.result.transaction(['loan'], "readwrite").objectStore('loan');
   let index = objectStore.index('index_userid');
   let request = index.getAll(`${profile.getId()}`);
 
