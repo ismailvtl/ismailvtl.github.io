@@ -64,7 +64,8 @@ function add() {
   var active = dataBase.result;
   var data = active.transaction(["loan"], "readwrite");
   var objectDb = data.objectStore("loan");
-  if (lname.length && lamount.length && ldate.length) {
+  if (lname.length > 0 && lamount.length > 0 && ldate.length > 0) {
+    console.log("inside length check")
     var request = objectDb.put({
       userid: profile.getId(),
       title: lname,
