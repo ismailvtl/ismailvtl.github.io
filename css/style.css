@@ -100,3 +100,33 @@ button.show-add-view {
     color: #FFF;
     background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
 }
+
+
+.side-view {
+    position: fixed;
+    height: 100%;
+    width: 80%;
+    background: #252525;
+    z-index: 0999;
+    top: 0;
+    right: 0;
+}
+
+.side-view ul {
+    list-style: none;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.side-view ul li {
+    font-size: 20px;
+}
+
+.side-view ul li a {
+    color: #FFF;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
