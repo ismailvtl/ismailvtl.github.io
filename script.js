@@ -1,8 +1,5 @@
 let profile = null;
 let exd = document.querySelector('#exd');
-let lname = document.querySelector("#lname");
-let lamount = document.querySelector("#lamount")
-let ldate =  document.querySelector("#ldate");
 let userDiv = document.querySelector('#user');
 let logoutBtn = document.querySelector('.logout-btn');
 let readBtn = document.querySelector('.read-btn');
@@ -60,6 +57,9 @@ function signOut() {
 }
 
 function add() {
+  let lname = document.querySelector("#lname");
+  let lamount = document.querySelector("#lamount")
+  let ldate =  document.querySelector("#ldate");
   console.log("inside add", lname.value, ldate.value, lamount.value);
   var active = dataBase.result;
   var data = active.transaction(["loan"], "readwrite");
