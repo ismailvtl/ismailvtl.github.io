@@ -88,15 +88,12 @@ function add() {
 }
 
 function read() {
-  if (dataBase) {
-    var db = dataBase.result;
-    let request = null;
-    var transaction = db.transaction(["loan"]);
-    var objectDb = transaction.objectStore("loan");
-    var index = objectDb.index('index_userid');
-    request = index.getAll(`${profile.getId()}`);
-  }
-
+  let db = dataBase.result;
+  let transaction = db.transaction(["loan"]);
+  let objectDb = transaction.objectStore("loan");
+  let index = objectDb.index('index_userid');
+  let request = index.getAll(`${profile.getId()}`);
+  
   request.onerror = function(event) {
     alert("Unable to retrieve data from database!");
   };
