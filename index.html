@@ -31,6 +31,9 @@
 <br>
 <a href="#" class="read-btn" onclick="read();">Read</a>
 
+<div id="exd" />
+
+
 <script>
 let profile = null;
 
@@ -56,6 +59,7 @@ dataBase.onerror = function (e) {
 alert("error");
 };
 
+read();
 
 function onSignIn(googleUser) {
   profile = googleUser.getBasicProfile();
@@ -126,10 +130,10 @@ function read() {
   request.onsuccess = function(event) {
   // Do something with the request.result!
     if(request.result) {
-      console.log(request.result);
-      //request.result.forEach(data => {
-       // console.log(data);
-     // });
+      //console.log(request.result);
+      request.result.forEach(data => {
+       document.querySelector('#exd').innerHTML += `<div class="exd-row"><span>${data.title}</span><span>${data.amount}</span><span>${data.maturity}</span></div>`
+      });
     } else {
       console.log("nothing found for the user");
     }
