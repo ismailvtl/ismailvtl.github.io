@@ -9,6 +9,7 @@ let signinButton = document.querySelector('.g-signin2');
 
 let indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 let dataBase = null;
+let db = null;
 dataBase = indexedDB.open("loanTracker", 1);
 
 dataBase.onupgradeneeded = function (e) {
@@ -23,6 +24,7 @@ dataBase.onupgradeneeded = function (e) {
 
 dataBase.onsuccess = function (e) {
 console.log("success");
+db = dataBase.result;
 };
 
 dataBase.onerror = function (e) {
@@ -88,8 +90,7 @@ function add() {
 }
 
 function read() {
-  console.log(dataBase);
-  let db = dataBase.result;
+  let db = db.result;
   let transaction = db.transaction(["loan"]);
   let objectDb = transaction.objectStore("loan");
   let index = objectDb.index('index_userid');
@@ -110,20 +111,4 @@ function read() {
   };
 }
 
-function onLoadRead() {
-  var objectStore = dataBase.result.transaction(['loan'], "readwrite").objectStore('loan');
-  let index = objectStore.index('index_userid');
-  let request = index.getAll(`${profile.getId()}`);
-
-  request.onsuccess = function(event) {
-    exd.innerHTML='';
-    if(request.result) {
-      let arr = request.result.reverse();
-      arr.forEach(data => {
-       exd.innerHTML += `<div class="exd-row"><span>${data.title}</span><span>${data.amount}</span><span>${data.maturity}</span></div>`
-      });
-    }
-  };
-}
-
-onLoadRead();
+read();
