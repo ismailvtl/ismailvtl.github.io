@@ -116,3 +116,7 @@ function read() {
 function showAddView() {
   addDataDiv.classList.add('visible');
 }
+
+function closeAddView() {
+  addDataDiv.classList.remove('visible');
+}
