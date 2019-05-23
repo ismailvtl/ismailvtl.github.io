@@ -68,8 +68,8 @@ function add() {
     var request = objectDb.put({
       userid: profile.getId(),
       title: lname,
-      amount: lamount,
-      maturity: ldate
+      amount: Number(lamount),
+      maturity: new Date(ldate)
     });
 
     request.onerror = function (e) {
