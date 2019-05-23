@@ -101,7 +101,8 @@ function read() {
   request.onsuccess = function(event) {
     exd.innerHTML='';
     if(request.result) {
-      request.result.forEach(data => {
+      let arr = request.result.reverse();
+      arr.forEach(data => {
        exd.innerHTML += `<div class="exd-row"><span>${data.title}</span><span>${data.amount}</span><span>${data.maturity}</span></div>`
       });
     }
