@@ -41,3 +41,8 @@
     font-weight: 700;
     margin-bottom: 20px;
   }
+
+.loggedin div#user-details {
+    display: flex !important;
+    justify-content: space-between;
+}
