@@ -57,9 +57,9 @@ function signOut() {
 }
 
 function add() {
-  let lname = document.querySelector("#lname");
-  let lamount = document.querySelector("#lamount")
-  let ldate =  document.querySelector("#ldate");
+  let lname = document.querySelector("#lname").value;
+  let lamount = document.querySelector("#lamount").value
+  let ldate =  document.querySelector("#ldate").value;
   console.log("inside add", lname.value, ldate.value, lamount.value);
   var active = dataBase.result;
   var data = active.transaction(["loan"], "readwrite");
@@ -68,9 +68,9 @@ function add() {
     console.log("inside length check")
     var request = objectDb.put({
       userid: profile.getId(),
-      title: lname.value,
-      amount: lamount.value,
-      maturity: ldate.value
+      title: lname,
+      amount: lamount,
+      maturity: ldate
     });
 
     request.onerror = function (e) {
