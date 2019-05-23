@@ -67,9 +67,12 @@ function createDBandAdd() {
   let lamount = document.querySelector('#lamount').value;
   let ldate = document.querySelector('#ldate').value;
   let details = null;
+  let db = null;
+  let tx = null;
   if(lname.length > 0 && lamount.length > 0 && ldate.length > 0) {
       console.log("inside if");
-    let tx = db.transaction("MyObjectStore", "readwrite");
+    db = open.result;
+    tx = db.transaction("MyObjectStore", "readwrite");
     let store = tx.objectStore("MyObjectStore");
     store.add({id: profile.getId(), lname: lname, lamount: lamount, ldate: ldate});    
   } else {
