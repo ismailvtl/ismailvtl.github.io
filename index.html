@@ -92,7 +92,7 @@ function add() {
   let lname = document.querySelector('#lname').value;
   let lamount = document.querySelector('#lamount').value;
   let ldate = document.querySelector('#ldate').value;
-  var request = db.transaction(["loan"], "readwrite")
+  var request = db.transaction(["loan"], 'readwrite')
   .objectStore("loan")
   .add({ id: profile.getId(), name:  lname , amount: lamount, ldate: ldate });
 
@@ -101,7 +101,7 @@ function add() {
   };
 
   request.onerror = function(event) {
-      alert("Unable to add data\r\nKenny is aready exist in your database! ");
+      alert("Unable to add");
   }
 }
 </script>
