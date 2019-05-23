@@ -20,6 +20,7 @@ dataBase.onupgradeneeded = function (e) {
   objectDb.createIndex('index_title','title', {unique : false});
   objectDb.createIndex('index_amount','amount', {unique : false});
   objectDb.createIndex('index_maturity','maturity', {unique : false});
+  console.log("onupgradede", active);
 };
 
 dataBase.onsuccess = function (e) {
@@ -111,3 +112,4 @@ function read() {
     }
   };
 }
+
