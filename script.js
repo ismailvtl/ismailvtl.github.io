@@ -22,15 +22,6 @@ dataBase.onupgradeneeded = function (e) {
   objectDb.createIndex('index_maturity','maturity', {unique : false});
 };
 
-dataBase.onsuccess = function (e) {
-console.log("success");
-read();
-};
-
-dataBase.onerror = function (e) {
-alert("error");
-};
-
 function onSignIn(googleUser) {
   profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
@@ -44,6 +35,17 @@ function onSignIn(googleUser) {
   addDataDiv.classList.add('visible');
   signinButton.style.display ='none';
 }
+
+dataBase.onsuccess = function (e) {
+console.log("success");
+read();
+};
+
+dataBase.onerror = function (e) {
+alert("error");
+};
+
+
 
 function signOut() {
     let auth2 = gapi.auth2.getAuthInstance();
