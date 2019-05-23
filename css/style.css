@@ -20,12 +20,14 @@ margin: 0 0 10px 0;
   .logout-btn, #user-details, #add-data, .read-btn { display: none }
   .visible { display : block !important}
 div#exd {
-    height: calc(100% - 130px);
+        height: calc(100% - 150px);
     overflow: auto;
     position: fixed;
-    width: 97%;
+    width: 93%;
     left: 50%;
     transform: translate(-50%);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
   div#exd .exd-row {
