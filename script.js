@@ -1,12 +1,22 @@
 let profile = null;
+let exd = document.querySelector('#exd');
+let lname = document.querySelector("#lname").value;
+let lamount = document.querySelector("#lamount").value;
+let ldate =  document.querySelector("#ldate").value;
+let userDiv = document.querySelector('#user');
+let logoutBtn = document.querySelector('.logout-btn');
+let readBtn = document.querySelector('.read-btn');
+let userDetailsDiv = document.querySelector('#user-details');
+let addDataDiv = document.querySelector('#add-data');
+let signinButton = document.querySelector('.g-signin2');
 
-var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-var dataBase = null;
+let indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+let dataBase = null;
 dataBase = indexedDB.open("loanTracker", 1);
 
 dataBase.onupgradeneeded = function (e) {
-	var active = dataBase.result;
-	var objectDb = active.createObjectStore("loan", {keyPath: 'id', autoIncrement : true});
+	let active = dataBase.result;
+	let objectDb = active.createObjectStore("loan", {keyPath: 'id', autoIncrement : true});
   objectDb.createIndex('index_recordid','id', {unique : true});
 	objectDb.createIndex('index_userid','userid', {unique : false});
   objectDb.createIndex('index_title','title', {unique : false});
@@ -28,24 +38,24 @@ function onSignIn(googleUser) {
   console.log('Name: ' + profile.getName());
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-  document.querySelector('#user').innerHTML = profile.getName();
-  document.querySelector('.logout-btn').classList.add('visible');
-  document.querySelector('.read-btn').classList.add('visible');
-  document.querySelector('#user-details').classList.add('visible');
-  document.querySelector('#add-data').classList.add('visible');
-  document.querySelector('.g-signin2').style.display ='none';
+  userDiv.innerHTML = profile.getName();
+  logoutBtn.classList.add('visible');
+  readBtn.classList.add('visible');
+  userDetailsDiv.classList.add('visible');
+  addDataDiv.classList.add('visible');
+  signinButton.style.display ='none';
 }
 
 function signOut() {
     let auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
       console.log('User signed out.');
-      document.querySelector('.g-signin2').style.display ='block';
-      document.querySelector('#user-details').classList.remove('visible');
-      document.querySelector('.logout-btn').classList.remove('visible');
-      document.querySelector('#add-data').classList.remove('visible');
-      document.querySelector('.read-btn').classList.remove('visible');
-      document.querySelector('#exd').innerHTML='';
+      signinButton.style.display ='block';
+      userDetailsDiv.classList.remove('visible');
+      logoutBtn.classList.remove('visible');
+      addDataDiv.classList.remove('visible');
+      readBtn.classList.remove('visible');
+      exd.innerHTML='';
     });
 }
 
@@ -54,9 +64,6 @@ function add() {
   var active = dataBase.result;
   var data = active.transaction(["loan"], "readwrite");
   var objectDb = data.objectStore("loan");
-  var lname = document.querySelector("#lname").value;
-  var lamount = document.querySelector("#lamount").value;
-  var ldate =  document.querySelector("#ldate").value;
   if (lname.length > 0 && lamount.length > 0 && ldate.length > 0) {
     var request = objectDb.put({
       userid: profile.getId(),
@@ -92,10 +99,10 @@ function read() {
   };
 
   request.onsuccess = function(event) {
-    document.querySelector('#exd').innerHTML='';
+    exd.innerHTML='';
     if(request.result) {
       request.result.forEach(data => {
-       document.querySelector('#exd').innerHTML += `<div class="exd-row"><span>${data.title}</span><span>${data.amount}</span><span>${data.maturity}</span></div>`
+       exd.innerHTML += `<div class="exd-row"><span>${data.title}</span><span>${data.amount}</span><span>${data.maturity}</span></div>`
       });
     }
   };
