@@ -32,14 +32,15 @@ div#exd {
 
   div#exd .exd-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     box-sizing: border-box;
-          border-radius: 10px;
+    border-radius: 10px;
     padding: 15px 5px;
-          margin-bottom: 20px;
+    margin-bottom: 20px;
     color: #FFF;
-      background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      flex-direction: column;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    flex-direction: column;
+    min-height: 150px;
   }
   div#exd .exd-row span {
     width: 100%;
@@ -100,6 +101,10 @@ div#exd .exd-row span:nth-child(2) {
 
 div#exd .exd-row span:nth-child(1) {
     font-size: 20px;
+}
+
+div#exd .exd-row span:nth-child(3) {
+    margin-top: auto;
 }
 
 div#add-data {
