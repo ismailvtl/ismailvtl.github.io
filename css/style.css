@@ -1,0 +1,33 @@
+	  body{font: 18px system-ui, -apple-system, Helvetica, sans-serif;}
+  .logout-btn, #user-details, #add-data, .read-btn { display: none }
+  .visible { display : block !important}
+  div#exd .exd-row {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  div#exd .exd-row span {
+    width: 100%;
+    padding: 10px 10px;
+    text-transform: capitalize;
+  }
+  div#add-data input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  div#add-data {
+    margin-top: 20px;
+  }
+
+  button#add-data-btn {
+    display: flex;
+    padding: 10px;
+    margin: auto;
+    min-width: 280px;
+    justify-content: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
