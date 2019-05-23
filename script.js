@@ -82,11 +82,16 @@ function add() {
       document.querySelector("#lamount").value = "";
       document.querySelector("#ldate").value = "";
       console.log("added");
+      addDataDiv.classList.remove('visible');
       read();
     };
   } else {
     alert("details cannot be blank");
   }
+}
+
+function showAddview() {
+  addDataDiv.classList.add('visible');
 }
 
 function read() {
@@ -111,4 +116,3 @@ function read() {
     }
   };
 }
-
