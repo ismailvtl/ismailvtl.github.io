@@ -10,13 +10,32 @@
   <style>
   .logout-btn, #user-details, #add-data { display: none }
   .visible { display : block !important}
+  div#exd .exd-row {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  div#exd .exd-row span {
+    width: 100%;
+    padding: 10px 10px;
+    text-transform: capitalize;
+  }
+  div#add-data input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  div#add-data {
+    margin-top: 20px;
+  }
   </style>
 </head>
 <body>
 <div class="g-signin2" data-onsuccess="onSignIn"></div>
 <div id="user-details">
-<span id="user"></span>
-<span id="email"></span>
+Welcome, <span id="user"></span>
 </div>
 
 <div id="add-data">
@@ -26,14 +45,12 @@
   <button type="button" id="add-data-btn" onclick="add();">Add</button>
 </div>
 
-<br>
-<a href="#" class="logout-btn" onclick="signOut();">Sign out</a>
-<br>
 <a href="#" class="read-btn" onclick="read();">Read</a>
-
+<br>
 <div id="exd"></div>
 
-
+<br>
+<a href="#" class="logout-btn" onclick="signOut();">Sign out</a>
 <script>
 let profile = null;
 
@@ -66,7 +83,6 @@ function onSignIn(googleUser) {
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   document.querySelector('#user').innerHTML = profile.getName();
-  document.querySelector('#email').innerHTML = profile.getEmail();
   document.querySelector('.logout-btn').classList.add('visible');
   document.querySelector('#user-details').classList.add('visible');
   document.querySelector('#add-data').classList.add('visible');
