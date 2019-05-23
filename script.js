@@ -90,10 +90,6 @@ function add() {
   }
 }
 
-function showAddview() {
-  addDataDiv.classList.add('visible');
-}
-
 function read() {
   console.log("in read method", dataBase);
   let db = dataBase.result;
@@ -115,4 +111,8 @@ function read() {
       });
     }
   };
+}
+
+function showAddView() {
+  addDataDiv.classList.add('visible');
 }
