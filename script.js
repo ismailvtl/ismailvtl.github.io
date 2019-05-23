@@ -25,7 +25,6 @@ dataBase.onupgradeneeded = function (e) {
 
 dataBase.onsuccess = function (e) {
 console.log("success");
-console.log(dataBase)
 };
 
 dataBase.onerror = function (e) {
@@ -34,10 +33,10 @@ alert("error");
 
 function onSignIn(googleUser) {
   profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('ID: ' + profile.getId()); 
   console.log('Name: ' + profile.getName());
   console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  console.log('Email: ' + profile.getEmail());
   userDiv.innerHTML = profile.getName();
   logoutBtn.classList.add('visible');
   readBtn.classList.add('visible');
