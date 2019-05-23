@@ -98,10 +98,13 @@ button.show-add-view {
     border: none;
     font-size: 34px;
     color: #FFF;
+    display: none;
     background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
 }
 
-
+.loggedin button.show-add-view {
+    display: block;
+}
 .side-view {
     position: fixed;
     height: 100%;
