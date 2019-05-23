@@ -79,7 +79,7 @@ dataBase.onupgradeneeded = function (e) {
 };
 
 dataBase.onsuccess = function (e) {
-alert("success");
+console.log("success");
 };
 
 dataBase.onerror = function (e) {
@@ -129,7 +129,7 @@ function add() {
     });
 
     request.onerror = function (e) {
-      console.log(request.error.name + '\n\n' + request.error.message);
+      alert(request.error.name + '\n\n' + request.error.message);
     };
 
     data.oncomplete = function (e) {
@@ -140,7 +140,7 @@ function add() {
     };
     read();
   } else {
-    alert("details cannot be blank")
+    alert("details cannot be blank");
   }
 }
 
@@ -151,22 +151,20 @@ function read() {
   var index = objectDb.index('index_userid');
   var request = index.getAll(`${profile.getId()}`);
   request.onerror = function(event) {
-  alert("Unable to retrieve data from database!");
+    alert("Unable to retrieve data from database!");
   };
 
   request.onsuccess = function(event) {
-  // Do something with the request.result!
+    document.querySelector('#exd').innerHTML='';
     if(request.result) {
-      //console.log(request.result);
       request.result.forEach(data => {
        document.querySelector('#exd').innerHTML += `<div class="exd-row"><span>${data.title}</span><span>${data.amount}</span><span>${data.maturity}</span></div>`
       });
-    } else {
-      console.log("nothing found for the user");
     }
   };
 }
 
+read();
 </script>
 </body>
 </html>
