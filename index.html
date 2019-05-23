@@ -26,8 +26,11 @@
   <button type="button" id="add-data-btn" onclick="add();">Add</button>
 </div>
 
-
+<br>
 <a href="#" class="logout-btn" onclick="signOut();">Sign out</a>
+<br>
+<a href="#" class="read-btn" onclick="read();">Read</a>
+
 <script>
 let profile = null;
 
@@ -100,15 +103,35 @@ function add() {
     };
 
     data.oncomplete = function (e) {
-      document.querySelector("#lname").value = "";
-      document.querySelector("#lamount").value = "";
-      document.querySelector("#ldate").value = "";
+      lname = "";
+      lamount = "";
+      ldate = "";
       console.log("added");
     };
   } else {
     alert("details cannot be blank")
   }
 }
+
+function read() {
+  var transaction = db.transaction(["loan"]);
+  var objectStore = transaction.objectStore("loan");
+  var request = objectStore.get(profile.getId());
+
+  request.onerror = function(event) {
+  alert("Unable to retrieve data from database!");
+  };
+
+  request.onsuccess = function(event) {
+  // Do something with the request.result!
+    if(request.result) {
+      console.log(request.result);
+    } else {
+      console.log("nothing found for the user");
+    }
+  };
+}
+
 </script>
 </body>
 </html>
