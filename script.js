@@ -64,7 +64,7 @@ function add() {
   var active = dataBase.result;
   var data = active.transaction(["loan"], "readwrite");
   var objectDb = data.objectStore("loan");
-  if (lname.length > 0 && lamount.length > 0 && ldate.length > 0) {
+  if (lname.length && lamount.length && ldate.length) {
     var request = objectDb.put({
       userid: profile.getId(),
       title: lname,
