@@ -68,7 +68,7 @@ div#exd {
     text-transform: capitalize;
       box-sizing: border-box;
   }
-  div#add-data input[type="input"], div#add-data input[type="number"], div#add-data input[type="date"] {
+  div#add-data input[type="text"], div#add-data input[type="number"], div#add-data input[type="date"] {
         width: 100%;
     box-sizing: border-box;
     margin-bottom: 18px;
