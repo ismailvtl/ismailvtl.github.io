@@ -53,13 +53,14 @@ div#exd {
     display: flex;
     justify-content: flex-start;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 3px;
     padding: 15px 5px;
     margin-bottom: 20px;
     color: #FFF;
      background: linear-gradient(to left, #39497d, #23345f);
     flex-direction: column;
-    min-height: 150px;
+    min-height: 160px;
+    box-shadow: 2px 2px 0px #739ab9;
   }
   div#exd .exd-row span {
     width: 100%;
@@ -110,7 +111,7 @@ a.logout-btn.visible {
     background: #ccc;
     background: #243561;
     color: #FFF;
-    border-radius: 10px;
+    border-radius: 4px;
     font-size: 14px;
     text-decoration: none;
 }
