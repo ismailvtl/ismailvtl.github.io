@@ -6,9 +6,6 @@ let userDetailsDiv = document.querySelector('#user-details');
 let addDataDiv = document.querySelector('#add-data');
 let signinButton = document.querySelector('.g-signin2');
 
-let today = new Date().toISOString().substr(0, 10);
-document.querySelector("#ldate").value = today;
-
 let indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 let dataBase = null;
 let db = null;
@@ -22,6 +19,7 @@ dataBase.onupgradeneeded = function (e) {
   objectDb.createIndex('index_title','title', {unique : false});
   objectDb.createIndex('index_amount','amount', {unique : false});
   objectDb.createIndex('index_maturity','maturity', {unique : false});
+  objectDb.createIndex('index_paymentdate','paydate', {unique : false});
   console.log("onupgradede", active);
 };
 
@@ -75,7 +73,8 @@ function add() {
       userid: profile.getId(),
       title: document.querySelector("#lname").value,
       amount: `${document.querySelector("#lamount").value} ${document.querySelector("#lcurrency").value}`,
-      maturity: document.querySelector("#ldate").value
+      maturity: document.querySelector("#ldate").value,
+      paydate: document.querySelector("#lpdate").value
     });
 
     request.onerror = function (e) {
@@ -129,10 +128,13 @@ function read() {
 
 function showAddView() {
   addDataDiv.classList.add('visible');
+  let today = new Date().toISOString().substr(0, 10);
+  document.querySelector("#ldate").value = today;
 }
 
 function closeAddView() {
   addDataDiv.classList.remove('visible');
+  document.querySelector("#ldate").value = "";
 }
 
 
