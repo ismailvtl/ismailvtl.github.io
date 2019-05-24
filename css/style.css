@@ -244,9 +244,9 @@ input#autopay {
 }
 
 .currency-div.auto-pay > div:first-child {
-    width: 60%;
+    width: 48%;
 }
 
 .currency-div.auto-pay > div:nth-child(2) {
-    width: 60%;
+    width: 48%;
 }
