@@ -232,7 +232,7 @@ div#add-data label {
     width: 30%;
 }
 
-.loggedin div#add-data {
+.loggedin div#add-data.visible {
     display: flex !important;
     flex-direction: column;
 }
