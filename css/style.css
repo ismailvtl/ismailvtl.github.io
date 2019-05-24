@@ -34,7 +34,7 @@ h2 {
     margin: 0 0 30px 0px;
 }
   .container {
-    padding: 10px;
+        padding: 0px 10px 0px 10px;
   }
   .logout-btn, #user-details, #add-data, .read-btn { display: none }
   .visible { display : block !important}
