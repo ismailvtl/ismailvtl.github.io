@@ -6,6 +6,9 @@ let userDetailsDiv = document.querySelector('#user-details');
 let addDataDiv = document.querySelector('#add-data');
 let signinButton = document.querySelector('.g-signin2');
 
+let today = new Date().toISOString().substr(0, 10);
+document.querySelector("#ldate").value = today;
+
 let indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 let dataBase = null;
 let db = null;
