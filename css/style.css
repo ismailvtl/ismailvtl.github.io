@@ -251,3 +251,19 @@ input#autopay {
 .currency-div.auto-pay > div:nth-child(2) {
     width: 48%;
 }
+
+
+.autopay-div div span input {
+    height: 22px;
+    width: 22px;
+    vertical-align: middle;
+}
+
+.autopay-div div span {
+    width: 100%;
+    color: #FFF;
+}
+
+.autopay-div div {
+    display: flex;
+}
