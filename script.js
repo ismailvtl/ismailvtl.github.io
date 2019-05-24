@@ -65,14 +65,16 @@ function add() {
   let lname = document.querySelector("#lname").value;
   let lamount = document.querySelector("#lamount").value
   let ldate =  document.querySelector("#ldate").value;
+   let lcurrency =  document.querySelector("#lcurrency").value;
+   let lpdate =  document.querySelector("#lpdate").value;
   var active = dataBase.result;
   var data = active.transaction(["loan"], "readwrite");
   var objectDb = data.objectStore("loan");
-  if (document.querySelector("#lname").value.length && document.querySelector("#lamount").value.length && document.querySelector("#ldate").value.length) {
+  if (document.querySelector("#lname").value.length && document.querySelector("#lamount").value.length && document.querySelector("#ldate").value.length && document.querySelector("#lpdate").value.length) {
     var request = objectDb.put({
       userid: profile.getId(),
       title: document.querySelector("#lname").value,
-      amount: document.querySelector("#lamount").value,
+      amount: `${document.querySelector("#lamount").value} ${document.querySelector("#lcurrency").value}`,
       maturity: document.querySelector("#ldate").value
     });
 
@@ -84,6 +86,8 @@ function add() {
       document.querySelector("#lname").value = "";
       document.querySelector("#lamount").value = "";
       document.querySelector("#ldate").value = "";
+      document.querySelector("#lcurrency").value = "";
+      document.querySelector("#lpdate").value = "";
       console.log("added");
       addDataDiv.classList.remove('visible');
       read();
