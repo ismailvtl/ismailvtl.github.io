@@ -237,3 +237,16 @@ div#add-data label {
     display: flex !important;
     flex-direction: column;
 }
+
+input#autopay {
+    height: 30px;
+    width: 30px;
+}
+
+.currency-div.auto-pay > div:first-child {
+    width: 60%;
+}
+
+.currency-div.auto-pay > div:nth-child(2) {
+    width: 60%;
+}
