@@ -120,6 +120,7 @@ a.logout-btn.visible {
 div#exd .exd-row span:nth-child(2) {
     font-size: 30px;
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 div#exd .exd-row span:nth-child(1) {
