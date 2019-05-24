@@ -82,11 +82,6 @@ function add() {
     };
 
     data.oncomplete = function (e) {
-      document.querySelector("#lname").value = "";
-      document.querySelector("#lamount").value = "";
-      document.querySelector("#ldate").value = "";
-      document.querySelector("#lcurrency").value = "";
-      document.querySelector("#lpdate").value = "";
       console.log("added");
       addDataDiv.classList.remove('visible');
       read();
@@ -128,6 +123,10 @@ function read() {
 
 function showAddView() {
   addDataDiv.classList.add('visible');
+     document.querySelector("#lname").value = "";
+      document.querySelector("#lamount").value = "";
+      document.querySelector("#lcurrency").value = "";
+      document.querySelector("#lpdate").value = "";
   let today = new Date().toISOString().substr(0, 10);
   document.querySelector("#ldate").value = today;
 }
