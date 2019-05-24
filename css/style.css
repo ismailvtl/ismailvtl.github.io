@@ -253,17 +253,17 @@ input#autopay {
 }
 
 
-.autopay-div div span input {
+.autopay-div span input {
     height: 22px;
     width: 22px;
     vertical-align: middle;
 }
 
-.autopay-div div span {
+.autopay-div span {
     width: 100%;
     color: #FFF;
 }
 
-.autopay-div div {
+.autopay-div {
     display: flex;
 }
