@@ -111,8 +111,8 @@ function read() {
 	     let m = data.maturity.split('-');
 	      let d = new Date();
 	     console.log(m);
-	     let dt1 = new Date(m[0],m[1],m[2]);
-	      let dt2 = new Date(d.getFullYear(), d.getMonth() + 1, d.getDay());
+	     let dt1 = new Date(m[0],m[1]);
+	      let dt2 = new Date(d.getFullYear(), d.getMonth() + 1);
              let mon = monthDiff(dt1, dt2);
        exd.innerHTML += `<div class="exd-row"><span>${data.title}</span><span>${data.amount}</span><span>Maturity Date: ${m[2]} ${monthnames[Number(m[1] - 1)]} ${m[0]} ( <small>${mon} months left</small> )</span></div>`
       });
