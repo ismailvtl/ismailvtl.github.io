@@ -116,7 +116,7 @@ function read() {
 	      let dt1 = new Date(d.getFullYear(), d.getMonth() + 1);
 	     let dt2 = new Date(m[0],m[1]);
              let mon = monthDiff(dt1, dt2);
-       exd.innerHTML += `<div class="exd-row" data-item="${data.id}"><span>${data.title}</span><span>${data.amount}</span><div class="paymentdatediv"><span>Next payment on: </span><span>${data.paydate} ${d.getMonth()+1} ${d.getFullYear()}</span></div><span><div>Maturity Date</div> ${m[2]} ${monthnames[Number(m[1] - 1)]} ${m[0]} ( <small>${mon} months left</small> )</span></div>`
+       exd.innerHTML += `<div class="exd-row" data-item="${data.id}"><span>${data.title}</span><span>${data.amount}</span><div class="paymentdatediv"><span>Next payment on: </span><span>${data.paydate} ${monthnames[d.getMonth()-1]} ${d.getFullYear()}</span></div><span><div>Maturity Date</div> ${m[2]} ${monthnames[Number(m[1] - 1)]} ${m[0]} ( <small>${mon} months left</small> )</span></div>`
       });
     }
   };
