@@ -267,3 +267,12 @@ input#autopay {
 .autopay-div {
     display: flex;
 }
+.paymentdatediv {
+display: flex;
+flex-direction: column;
+margin-bottom: 15px;
+}
+
+.paymentdatediv span{
+font-size: 22px;
+}
