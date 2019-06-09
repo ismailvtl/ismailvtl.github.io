@@ -140,3 +140,21 @@ function monthDiff(dateFrom, dateTo) {
  return dateTo.getMonth() - dateFrom.getMonth() + 
    (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
 }
+
+
+
+/* push */
+document.querySelector('#notify-button').addEventListener('click', function() {
+Push.create("Hello world!",{
+            body: "This is example of Push.js Tutorial",
+            icon: '/Logo_small.png',
+            timeout: 10000,
+            onClick: function () {
+                window.focus();
+                this.close();
+            }
+        });
+ });
+ document.querySelector('#check-button').addEventListener('click', function() {
+ console.log(Push.Permission.has());
+ });
