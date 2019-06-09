@@ -22,7 +22,7 @@ h1 {
     margin: 0 -10px 10px -10px;
     color: #fff;
     text-align: left;
-    background: #d81b60;
+    background: #D81B60;
     padding-bottom: 10px;
     font-weight: normal;
     padding: 10px;
@@ -57,7 +57,7 @@ div#exd {
     padding: 15px 5px;
     margin-bottom: 20px;
     color: #FFF;
-     background: #d81b60;
+     background: #D81B60;
     flex-direction: column;
     min-height: 160px;
   }
@@ -109,7 +109,7 @@ button#add-data-btn {
 
 a.logout-btn.visible {
     padding: 7px 10px;
-    background: #888;
+    background: #333;
     color: #FFF;
     border-radius: 4px;
     font-size: 14px;
