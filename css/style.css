@@ -152,11 +152,10 @@ button.show-add-view {
     right: 20px;
     border-radius: 50%;
     border: none;
-    font-size: 38px;
+    font-size: 32px;
     color: #FFF;
     display: none;
-    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
-        box-shadow: 0px 0px 1px 2px #009688;
+    background: #e91e63;
 }
 
 .loggedin button.show-add-view {
