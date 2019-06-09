@@ -21,7 +21,6 @@ dataBase.onupgradeneeded = function (e) {
   objectDb.createIndex('index_amount','amount', {unique : false});
   objectDb.createIndex('index_maturity','maturity', {unique : false});
   objectDb.createIndex('index_paymentdate','paydate', {unique : false});
-  console.log("onupgradede", active);
 };
 
 dataBase.onsuccess = function (e) {
@@ -34,10 +33,10 @@ alert("error");
 
 function onSignIn(googleUser) {
   profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); 
+ /* console.log('ID: ' + profile.getId()); 
   console.log('Name: ' + profile.getName());
   console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail());
+  console.log('Email: ' + profile.getEmail());*/
   userDiv.innerHTML = profile.getName();
   logoutBtn.classList.add('visible');
   userDetailsDiv.classList.add('visible');
@@ -50,7 +49,7 @@ function onSignIn(googleUser) {
 function signOut() {
     let auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
-      console.log('User signed out.');
+     // console.log('User signed out.');
       signinButton.style.display ='block';
       userDetailsDiv.classList.remove('visible');
       logoutBtn.classList.remove('visible');
@@ -83,7 +82,7 @@ function add() {
     };
 
     data.oncomplete = function (e) {
-      console.log("added");
+      //console.log("added");
       addDataDiv.classList.remove('visible');
       read();
     };
@@ -93,7 +92,7 @@ function add() {
 }
 
 function read() {
-  console.log("in read method", dataBase);
+ // console.log("in read method", dataBase);
   let db = dataBase.result;
   let transaction = db.transaction(["loan"]);
   let objectDb = transaction.objectStore("loan");
@@ -116,7 +115,7 @@ function read() {
 	      let dt1 = new Date(d.getFullYear(), d.getMonth() + 1);
 	     let dt2 = new Date(m[0],m[1]);
              let mon = monthDiff(dt1, dt2);
-       exd.innerHTML += `<div class="exd-row" data-item="${data.id}"><span>${data.title}</span><span>${data.amount}</span><div class="paymentdatediv"><span>Next payment on: </span><span>${data.paydate} ${monthnames[d.getMonth()]} ${d.getFullYear()}</span></div><span><div>Maturity Date</div> ${m[2]} ${monthnames[Number(m[1] - 1)]} ${m[0]} ( <small>${mon} months left</small> )</span></div>`
+       exd.innerHTML += `<div class="exd-row" data-item="${data.id}"><span>${data.title}</span><span>${data.amount}</span><div class="paymentdatediv"><span>Next payment on : </span><span>${data.paydate} ${monthnames[d.getMonth()]} ${d.getFullYear()}</span></div><span><div>Maturity Date</div> ${m[2]} ${monthnames[Number(m[1] - 1)]} ${m[0]} ( <small>${mon} months left</small> )</span></div>`
       });
     }
   };
