@@ -144,6 +144,14 @@ function monthDiff(dateFrom, dateTo) {
 
 
 /* push */
+
+if(!Push.Permission.has()){
+Push.Permission.request();
+}
+else {
+alert("notification permission granted");
+}
+
 document.querySelector('#notify-button').addEventListener('click', function() {
 Push.create("Hello world!",{
             body: "This is example of Push.js Tutorial",
