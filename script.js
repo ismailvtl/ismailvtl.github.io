@@ -6,8 +6,6 @@ let userDetailsDiv = document.querySelector('#user-details');
 let addDataDiv = document.querySelector('#add-data');
 let signinButton = document.querySelector('.g-signin2');
 
-Push.Permission.request(onGranted, onDenied);
-
 let indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 let dataBase = null;
 let db = null;
