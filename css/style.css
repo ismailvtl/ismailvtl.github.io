@@ -22,7 +22,7 @@ h1 {
     margin: 0 -10px 10px -10px;
     color: #fff;
     text-align: left;
-    background: #D81B60;
+    background: #3f51b5;
     padding-bottom: 10px;
     font-weight: normal;
     padding: 10px;
@@ -57,7 +57,7 @@ div#exd {
     padding: 15px 5px;
     margin-bottom: 20px;
     color: #FFF;
-     background: #D81B60;
+     background: #4527A0;
     flex-direction: column;
     min-height: 160px;
   }
@@ -208,6 +208,7 @@ button.close-add {
     position: fixed;
     right: 20px;
     z-index: 9999;
+    line-height: 40px;
 }
 
 div#add-data label {
@@ -273,3 +274,9 @@ margin-bottom: 15px;
 .paymentdatediv span{
 font-size: 16px;
 }
+
+
+div#exd .paymentdatediv span {
+    font-size: 20px !important;
+}
+
