@@ -65,23 +65,5 @@
       
 <script src="../push/push.js"></script>
 <script src="script.js"></script>
-<script>
-Push.Permission.request(onGranted, onDenied);
-
-document.querySelector('#notify-button').addEventListener('click', function() {
-Push.create("Hello world!",{
-            body: "This is example of Push.js Tutorial",
-            icon: '/Logo_small.png',
-            timeout: 10000,
-            onClick: function () {
-                window.focus();
-                this.close();
-            }
-        });
- });
- document.querySelector('#check-button').addEventListener('click', function() {
- console.log(Push.Permission.has());
- });
-</script>
 </body>
 </html>
