@@ -79,6 +79,12 @@ div#exd {
     background: #FFF;
 }
 
+div#add-data input[type="text"]::-webkit-input-placeholder,
+div#add-data input[type="number"]::-webkit-input-placeholder,
+div#add-data input[type="date"]::-webkit-input-placeholder {
+  font-size: 14px;
+}
+
 button#add-data-btn {
     display: flex;
     padding: 10px;
