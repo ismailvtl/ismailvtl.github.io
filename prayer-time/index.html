@@ -206,6 +206,12 @@
             color: red;
         }
 
+        .prayer-month-time>div.highlight {
+            background: #f1f1f1;
+            color: #000000;
+            font-weight: 700;
+        }
+
         @media screen and (max-width: 420px) {
 
             .prayer-title,
@@ -290,10 +296,11 @@
                     //console.log(typeof totalDays);
                     document.querySelector('.monthview-monthname').innerHTML = `${monthName} / ${year}`;
                     for (i = 1; i <= totalDays; i++) {
-                        //console.log(fullMonthObj);
-                        //if(Object.keys(fullMonthObj[i]) === "day") {
-                        document.querySelector('.monthview .prayer-month-time').innerHTML += `<div>${i}</div><div>${fullMonthObj[`date${i}`].fajr}</div><div>${fullMonthObj[`date${i}`].dhuhr}</div><div>${fullMonthObj[`date${i}`].asr}</div><div>${fullMonthObj[`date${i}`].maghrib}</div><div>${fullMonthObj[`date${i}`].isha}</div>`;
-                        //}
+                        if (i === today) {
+                            document.querySelector('.monthview .prayer-month-time').innerHTML += `<div class="highlight">${i}</div><div class="highlight">${fullMonthObj[`date${i}`].fajr}</div><div class="highlight">${fullMonthObj[`date${i}`].dhuhr}</div><div class="highlight">${fullMonthObj[`date${i}`].asr}</div><div class="highlight">${fullMonthObj[`date${i}`].maghrib}</div><div class="highlight">${fullMonthObj[`date${i}`].isha}</div>`;
+                        } else {
+                            document.querySelector('.monthview .prayer-month-time').innerHTML += `<div>${i}</div><div>${fullMonthObj[`date${i}`].fajr}</div><div>${fullMonthObj[`date${i}`].dhuhr}</div><div>${fullMonthObj[`date${i}`].asr}</div><div>${fullMonthObj[`date${i}`].maghrib}</div><div>${fullMonthObj[`date${i}`].isha}</div>`;
+                        }
                     }
                 })
                 .catch((error) => {
