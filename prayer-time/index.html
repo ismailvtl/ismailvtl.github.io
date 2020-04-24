@@ -158,7 +158,7 @@
             .then((jsonObject) => {
                 let todayTiming = jsonObject[`date${today}`];
                 fullMonthObj = jsonObject;
-                console.log(todayTiming);
+                //console.log(todayTiming);
                 document.querySelector('.container .prayer-values').innerHTML = `<div>${todayTiming.fajr}</div><div>${todayTiming.dhuhr}</div><div>${todayTiming.asr}</div><div>${todayTiming.maghrib}</div><div>${todayTiming.isha}</div>`;
                 document.querySelector('.date').innerHTML = `${todayTiming.week_day}, ${today} -${monthName} / ${year}`;
             })
