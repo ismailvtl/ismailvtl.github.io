@@ -1,8 +1,6 @@
 var cacheName = 'prayer-dubai-uae';
 var filesToCache = [
-  '/',
-  '/index.html',
-  '/sujud.png'
+  '/'
 ];
 
 /* Start the service worker and cache all of the app's content */
