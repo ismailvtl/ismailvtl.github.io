@@ -7,15 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Prayer Time - Dubai, UAE</title>
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="white"/>
+    <meta name="theme-color" content="white" />
     <style>
-       @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
         :root {
-            --font : 'Quicksand', sans-serif;
-            --text-color: #FFF;
-            --border-color: #f2f2f2;
+            --font: 'Quicksand', sans-serif;
+            --text-color: #333333;
+            --border-color: #e8e8e8;
         }
+
         * {
             margin: 0;
             padding: 0;
@@ -23,17 +24,14 @@
 
         body {
             display: flex;
-            height: 100vh;
-            background-image: linear-gradient(to bottom, #09203f 0%, #537895 100%);
+            background-color: #fdfdfd;
         }
 
         .container {
             display: flex;
             flex-wrap: wrap;
             max-width: 600px;
-            margin: 60px auto 30px;
-            height: 100vh;
-            max-height: 33%;
+            margin: 25px auto 30px;
             align-self: flex-start;
             min-width: 320px;
             color: var(--text-color);
@@ -57,16 +55,22 @@
             flex-basis: 100%;
             text-align: center;
             margin-bottom: 20px;
-           font-family: var(--font);
+            font-family: var(--font);
             font-size: 20px;
             font-weight: normal;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hijri {
+            margin-top: 4px;
         }
 
         .prayer-title,
         .prayer-values {
             width: calc(100%);
             display: flex;
-           font-family: var(--font);
+            font-family: var(--font);
             font-size: 16px;
             justify-content: space-between;
             font-weight: normal;
@@ -112,6 +116,96 @@
             letter-spacing: 2px;
         }
 
+        .container input[type="date"] {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .month-select {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            display: none;
+            align-items: center;
+            background: #fff;
+            border-radius: 3px;
+            padding: 0 10px;
+        }
+
+        .month-select img {
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .month-select select {
+            -webkit-appearance: none;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 13px;
+            background: no-repeat;
+            border: 0;
+        }
+
+        .month-select select:focus {
+            outline: none;
+        }
+
+        .monthview {
+            display: flex;
+            width: 100%;
+            margin-top: 50px;
+            flex-direction: column;
+            font-family: var(--font);
+            text-align: center;
+        }
+
+        .prayer-month-time,
+        .prayer-month-title {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        .prayer-month-time>div,
+        .prayer-month-title>div {
+            text-align: center;
+            padding: 10px 5px;
+            border: 1px solid var(--border-color);
+            border-top: 0;
+            border-left: 0;
+        }
+
+        .prayer-month-title {
+            margin: 10px 0 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .prayer-month-time>div:nth-child(6n + 1),
+        .prayer-month-title>div:first-child {
+            border-left: 1px solid var(--border-color);
+            font-weight: 700;
+        }
+
+        .prayer-month-time>div:nth-child(3n+2),
+        .prayer-month-title>:nth-child(3n+2) {
+            background: #f1f1f1;
+            color: #333333;
+        }
+
+        .monthview-monthname {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .devby {
+            font-size: 11px;
+            margin-top: 20px;
+        }
+
+        .devby span {
+            color: red;
+        }
+
         @media screen and (max-width: 420px) {
 
             .prayer-title,
@@ -121,7 +215,23 @@
 
             .date,
             .time {
-                font-size: 20px;
+                font-size: 18px;
+            }
+
+            .prayer-month-time>div,
+            .prayer-month-title>div {
+                font-size: 12px;
+                min-width: 60%;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .month-select {
+                right: auto;
+                left: 50%;
+                transform: translate(-50%);
             }
         }
     </style>
@@ -131,7 +241,6 @@
         let today = dateObj.getDate();
         let year = dateObj.getFullYear();
         let fullMonthObj = null;
-        let currentMonthObj = null;
         let monthName = new Date().toLocaleString("en-us", { month: "long" });
 
 
@@ -150,28 +259,70 @@
             return i;
         }
 
+        var getDaysInMonth = function (month, year) {
+            return new Date(year, month, 0).getDate();
+        };
 
-        fetch(`https://dmu-api.gulfnews.com/prayer-times/manage/public/api/prayertimings?country=united_arab_emirates&city=dubai&month=${currentMonth}`)
-            .then((response) => {
-                return response.json();
-            })
-            .then((jsonObject) => {
-                let todayTiming = jsonObject[`date${today}`];
-                fullMonthObj = jsonObject;
-                //console.log(todayTiming);
-                document.querySelector('.container .prayer-values').innerHTML = `<div>${todayTiming.fajr}</div><div>${todayTiming.dhuhr}</div><div>${todayTiming.asr}</div><div>${todayTiming.maghrib}</div><div>${todayTiming.isha}</div>`;
-                document.querySelector('.date').innerHTML = `${todayTiming.week_day}, ${today} -${monthName} / ${year}`;
-            })
-            .catch((error) => {
-                document.write(error);
-            });
+        function fetchDatesToday() {
+            fetch(`https://dmu-api.gulfnews.com/prayer-times/manage/public/api/prayertimings?country=united_arab_emirates&city=dubai&month=${currentMonth}`)
+                .then((response) => {
+                    return response.json();
+                })
+                .then((jsonObject) => {
+                    let todayTiming = jsonObject[`date${today}`];
+                    document.querySelector('.container .prayer-values').innerHTML = `<div>${todayTiming.fajr}</div><div>${todayTiming.dhuhr}</div><div>${todayTiming.asr}</div><div>${todayTiming.maghrib}</div><div>${todayTiming.isha}</div>`;
+                    document.querySelector('.date').innerHTML = `<span>${todayTiming.week_day}, ${today} -${monthName} / ${year}</span><span class="hijri">${todayTiming.hijri_month} - ${todayTiming.hijri_day}</span>`;
+                })
+                .catch((error) => {
+                    document.write(error);
+                });
+        }
 
+        function fetchMonthDates(monthNumber) {
+            fetch(`https://dmu-api.gulfnews.com/prayer-times/manage/public/api/prayertimings?country=united_arab_emirates&city=dubai&month=${monthNumber}`)
+                .then((response) => {
+                    return response.json();
+                })
+                .then((jsonObject) => {
+                    console.log(jsonObject);
+                    fullMonthObj = jsonObject;
+                    let totalDays = getDaysInMonth(fullMonthObj.month, fullMonthObj.year);
+                    //console.log(typeof totalDays);
+                    document.querySelector('.monthview-monthname').innerHTML = `${monthName} / ${year}`;
+                    for (i = 1; i <= totalDays; i++) {
+                        //console.log(fullMonthObj);
+                        //if(Object.keys(fullMonthObj[i]) === "day") {
+                        document.querySelector('.monthview .prayer-month-time').innerHTML += `<div>${i}</div><div>${fullMonthObj[`date${i}`].fajr}</div><div>${fullMonthObj[`date${i}`].dhuhr}</div><div>${fullMonthObj[`date${i}`].asr}</div><div>${fullMonthObj[`date${i}`].maghrib}</div><div>${fullMonthObj[`date${i}`].isha}</div>`;
+                        //}
+                    }
+                })
+                .catch((error) => {
+                    document.write(error);
+                });
+        }
+
+        fetchDatesToday();
+        fetchMonthDates("4");
 
     </script>
 </head>
 
-<body onload="startTime()">
+<body>
     <div class="container">
+        <div class="month-select">
+            <img src="calendar.svg" alt="" />
+            <select id="selectMonth">
+                <option data-month="4" selected>April</option>
+                <option data-month="5">May</option>
+                <option data-month="6">June</option>
+                <option data-month="7">July</option>
+                <option data-month="8">August</option>
+                <option data-month="9">September</option>
+                <option data-month="10">October</option>
+                <option data-month="11">November</option>
+                <option data-month="12">December</option>
+            </select>
+        </div>
         <h1>Prayer Time - Dubai, UAE</h1>
         <div class="date"></div>
         <div class="time"></div>
@@ -183,18 +334,42 @@
             <div>Isha</div>
         </div>
         <div class="prayer-values"></div>
+
+        <div class="monthview">
+            <div class="monthview-monthname"></div>
+            <div class="prayer-month-title">
+                <div>Date</div>
+                <div>Fajr</div>
+                <div>Dhuhr</div>
+                <div>Asr</div>
+                <div>Maghrib</div>
+                <div>Isha</div>
+            </div>
+            <div class="prayer-month-time">
+
+            </div>
+            <div class="devby">
+                Made with <span>&hearts;</span> by Ismail Vittal
+            </div>
+        </div>
     </div>
 
 
     <script>
         window.onload = () => {
             'use strict';
-
+            startTime();
             if ('serviceWorker' in navigator) {
                 navigator.serviceWorker
                     .register('sw.js');
             }
         }
+
+        // let selectEl = document.querySelector('#selectMonth');
+        // selectEl.addEventListener('change', function (e) {
+        //     let getMonthNumber = e.target.selectedOptions[0].getAttribute('data-month');
+        // })
+
     </script>
 
 </body>
