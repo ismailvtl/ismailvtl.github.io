@@ -1,8 +1,8 @@
-var cacheName = 'hello-pwa';
+var cacheName = 'prayer-dubai-uae';
 var filesToCache = [
   '/',
-  'index.html',
-  'https://image.flaticon.com/icons/svg/84/84627.svg'
+  '/index.html',
+  '/sujud.png'
 ];
 
 /* Start the service worker and cache all of the app's content */
