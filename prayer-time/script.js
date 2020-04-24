@@ -26,7 +26,7 @@ function fetchDatesToday(city) {
         .then((jsonObject) => {
             let todayTiming = jsonObject[`date${today}`];
             document.querySelector('.container .prayer-values').innerHTML = `<div>${todayTiming.fajr}</div><div>${todayTiming.dhuhr}</div><div>${todayTiming.asr}</div><div>${todayTiming.maghrib}</div><div>${todayTiming.isha}</div>`;
-            document.querySelector('.date').innerHTML = `<span>${todayTiming.week_day}, ${today} -${monthName} / ${year}</span><span class="hijri">${todayTiming.hijri_month} - ${todayTiming.hijri_day}</span>`;
+            document.querySelector('.date').innerHTML = `<span>${todayTiming.week_day}, ${today} - ${monthName} / ${year}</span><span class="hijri">${todayTiming.hijri_month} - ${todayTiming.hijri_day}</span>`;
         })
         .catch((error) => {
             document.write(error);
@@ -68,6 +68,7 @@ selectEl.addEventListener('change', function (e) {
 document.querySelector('#selectMonth').addEventListener('change', function (e) {
     let getSelectedMonth = e.target.selectedOptions[0].value;
     fetchMonthDates(selectedLocation, getSelectedMonth);
+    document.querySelector('.monthview').scrollIntoView({behavior: "smooth", block: "start"});
 });
 
 fetchDatesToday("dubai");
