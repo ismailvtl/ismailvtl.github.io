@@ -3,8 +3,10 @@ let currentMonth = dateObj.getMonth() + 1;
 let today = dateObj.getDate();
 let year = dateObj.getFullYear();
 let fullMonthObj = null;
-let monthName = new Date().toLocaleString("en-us", { month: "long" });
-let selectedLocation = "dubai" || "";
+let monthName = dateObj.toLocaleString("en-us", { month: "long" });
+let selectedLocation = localStorage.getItem("prayerLocation") || "dubai";
+console.log(selectedLocation);
+var monthNames = ["Janurary", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 window.onload = () => {
     'use strict';
@@ -62,21 +64,35 @@ function fetchMonthDates(city, monthNumber) {
         });
 }
 
-let selectEl = document.querySelector('#location');
-selectEl.addEventListener('change', function (e) {
+let selectLocationEl = document.querySelector('#location');
+selectLocationEl.addEventListener('change', function (e) {
     let getLocation = e.target.selectedOptions[0].value;
     selectedLocation = getLocation;
     fetchDatesToday(getLocation);
     fetchMonthDates(getLocation, currentMonth);
+    localStorage.setItem("prayerLocation", getLocation);
 })
 
-
-document.querySelector('#selectMonth').addEventListener('change', function (e) {
+let selectMonthEl = document.querySelector('#selectMonth');
+selectMonthEl.addEventListener('change', function (e) {
     let getSelectedMonth = e.target.selectedOptions[0].value;
     fetchMonthDates(selectedLocation, getSelectedMonth);
     document.querySelector('.monthview').scrollIntoView({behavior: "smooth", block: "start"});
 });
 
-fetchDatesToday("dubai");
-fetchMonthDates("dubai", currentMonth);
-document.querySelector('#selectMonth').options[currentMonth - 1].selected = "selected";
+monthNames.forEach(function(month, idx){
+    idx++;
+    if(idx >= currentMonth) {
+        selectMonthEl.innerHTML += `<option value="${idx}">${month}</option>`;
+    }
+})
+
+
+fetchDatesToday(selectedLocation);
+fetchMonthDates(selectedLocation, currentMonth);
+selectMonthEl.options[currentMonth - 1].selected = "selected";
+for(l =0;l<selectLocationEl.options.length;l++) {
+    if(selectLocationEl.options[l].getAttribute("value") === localStorage.getItem("prayerLocation")) {
+        selectLocationEl.options[l].selected = "selected";
+    }
+}
