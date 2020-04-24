@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Prayer Time - Dubai, UAE</title>
+    <link rel="manifest" href="manifest.json">
     <style>
        @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
         
@@ -180,13 +181,21 @@
             <div>Maghrib</div>
             <div>Isha</div>
         </div>
-        <div class="prayer-values">
-
-        </div>
-        <div class="month-list">
-
-        </div>
+        <div class="prayer-values"></div>
     </div>
+
+
+    <script>
+        window.onload = () => {
+            'use strict';
+
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker
+                    .register('sw.js');
+            }
+        }
+    </script>
+    
 </body>
 
 </html>
