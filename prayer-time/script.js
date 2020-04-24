@@ -90,7 +90,7 @@ monthNames.forEach(function(month, idx){
 
 fetchDatesToday(selectedLocation);
 fetchMonthDates(selectedLocation, currentMonth);
-selectMonthEl.options[currentMonth - 1].selected = "selected";
+//selectMonthEl.options[currentMonth - 1].selected = "selected";
 for(l =0;l<selectLocationEl.options.length;l++) {
     if(selectLocationEl.options[l].getAttribute("value") === localStorage.getItem("prayerLocation")) {
         selectLocationEl.options[l].selected = "selected";
