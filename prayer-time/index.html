@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+        
+        :root {
+            --font : 'Quicksand', sans-serif;
+            --text-color: #FFF;
+            --border-color: #f2f2f2;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            background-image: linear-gradient(to bottom, #09203f 0%, #537895 100%);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin: 60px auto 30px;
+            height: 100vh;
+            max-height: 33%;
+            align-self: flex-start;
+            min-width: 320px;
+            color: var(--text-color);
+            padding: 0 10px;
+        }
+
+        h1 {
+            font-family: var(--font);
+            font-size: 30px;
+            align-self: center;
+            text-align: center;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .date,
+        .time {
+            flex-basis: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+           font-family: var(--font);
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        .prayer-title,
+        .prayer-values {
+            width: calc(100%);
+            display: flex;
+           font-family: var(--font);
+            font-size: 16px;
+            justify-content: space-between;
+            font-weight: normal;
+        }
+
+        .prayer-title>div,
+        .prayer-values>div {
+            min-width: 20%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid var(--border-color);
+            border-left: 0;
+        }
+
+        .time span:first-child {
+            margin-bottom: 2px;
+        }
+
+        .time {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding-bottom: 2px;
+        }
+
+        .prayer-values>div {
+            border-top: 0;
+        }
+
+        .prayer-title>div:first-child,
+        .prayer-values>div:first-child {
+            border-left: 1px solid var(--border-color);
+        }
+
+        .time span:nth-child(2) {
+            width: 100%;
+            letter-spacing: 2px;
+        }
+
+        @media screen and (max-width: 420px) {
+
+            .prayer-title,
+            .prayer-values {
+                font-size: 15px;
+            }
+
+            .date,
+            .time {
+                font-size: 20px;
+            }
+        }
+    </style>
+    <script>
+        let dateObj = new Date();
+        let currentMonth = dateObj.getMonth() + 1;
+        let today = dateObj.getDate();
+        let year = dateObj.getFullYear();
+        let fullMonthObj = null;
+        let currentMonthObj = null;
+        let monthName = new Date().toLocaleString("en-us", { month: "long" });
+
+
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.querySelector('.time').innerHTML = `<span>Time</span><span>${h}:${m}:${s}</span>`
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+
+
+        fetch(`https://dmu-api.gulfnews.com/prayer-times/manage/public/api/prayertimings?country=united_arab_emirates&city=dubai&month=${currentMonth}`)
+            .then((response) => {
+                return response.json();
+            })
+            .then((jsonObject) => {
+                let todayTiming = jsonObject[`date${today}`];
+                fullMonthObj = jsonObject;
+                console.log(todayTiming);
+                document.querySelector('.container .prayer-values').innerHTML = `<div>${todayTiming.fajr}</div><div>${todayTiming.dhuhr}</div><div>${todayTiming.asr}</div><div>${todayTiming.maghrib}</div><div>${todayTiming.isha}</div>`;
+                document.querySelector('.date').innerHTML = `${todayTiming.week_day}, ${today} -${monthName} / ${year}`;
+            })
+            .catch((error) => {
+                document.write(error);
+            });
+
+
+    </script>
+</head>
+
+<body onload="startTime()">
+    <div class="container">
+        <h1>Prayer Time - Dubai, UAE</h1>
+        <div class="date"></div>
+        <div class="time"></div>
+        <div class="prayer-title">
+            <div>Fajr</div>
+            <div>Dhuhr</div>
+            <div>Asr</div>
+            <div>Maghrib</div>
+            <div>Isha</div>
+        </div>
+        <div class="prayer-values">
+
+        </div>
+        <div class="month-list">
+
+        </div>
+    </div>
+</body>
+
+</html>
