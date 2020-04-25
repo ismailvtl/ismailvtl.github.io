@@ -153,9 +153,11 @@ select#location {
     margin-bottom: 15px;
     font-size: 20px;
 }
+
 .prayer-title>div {
     font-size: 18px;
 }
+
 .container input[type="date"] {
     position: absolute;
     top: 10px;
@@ -206,6 +208,9 @@ select#location {
     border-top: 0;
     border-left: 0;
     color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .prayer-month-title {
@@ -248,7 +253,7 @@ select#location {
 
 .prayer-month-time>div.highlight {
     background: #f1f1f1;
-    color: #555;
+    color: #555555;
     font-weight: 700;
 }
 
@@ -272,4 +277,14 @@ select#location {
     h1 {
         font-size: 26px;
     }
+}
+
+.prayer-month-time>div:nth-child(6n + 1) {
+    display: flex;
+    flex-direction: column;
+}
+
+.prayer-month-time>div:nth-child(6n + 1) sup {
+    font-weight: 300;
+    font-size: 12px;
 }
