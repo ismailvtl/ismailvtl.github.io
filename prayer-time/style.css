@@ -153,7 +153,9 @@ select#location {
     margin-bottom: 15px;
     font-size: 20px;
 }
-
+.prayer-title>div {
+    font-size: 18px;
+}
 .container input[type="date"] {
     position: absolute;
     top: 10px;
