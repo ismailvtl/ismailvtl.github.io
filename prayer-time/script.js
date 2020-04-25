@@ -113,3 +113,25 @@ fetchMonthDates(selectedLocation, currentMonth);
 populateMonthSelect();
 setLocation();
 setMonth();
+
+
+
+
+/* Nitification */
+
+Notification.requestPermission(result => {
+    if (result === 'granted') {
+        showNotification("Prayer Time UAE", "Thank you for subscribing to notification");
+    }
+});
+  
+function showNotification(title, message) {
+    if ('Notification' in window) {
+      navigator.serviceWorker.ready.then(registration => {
+        registration.showNotification(title, {
+          body: message,
+          tag: 'vibration-sample'
+        });
+      });
+    }
+}
