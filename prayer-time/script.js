@@ -48,10 +48,10 @@ function fetchMonthDates(city, monthNumber) {
             document.querySelector('.monthview .prayer-month-time').innerHTML = "";
             for (i = 1; i <= totalDays; i++) {
                 if(monthNumber == currentMonth && i >= today) {
-                    if (i === today) {
-                        document.querySelector('.monthview .prayer-month-time').innerHTML += `<div class="highlight">${i}</div><div class="highlight">${fullMonthObj[`date${i}`].fajr}</div><div class="highlight">${fullMonthObj[`date${i}`].dhuhr}</div><div class="highlight">${fullMonthObj[`date${i}`].asr}</div><div class="highlight">${fullMonthObj[`date${i}`].maghrib}</div><div class="highlight">${fullMonthObj[`date${i}`].isha}</div>`;
+                    if (i === today && fullMonthObj[`date${i}`].hijri_month == "Ramadan") {
+                        document.querySelector('.monthview .prayer-month-time').innerHTML += `<div class="highlight">${i}<sup>${fullMonthObj[`date${i}`].hijri_day}</sup></div><div class="highlight">${fullMonthObj[`date${i}`].fajr}</div><div class="highlight">${fullMonthObj[`date${i}`].dhuhr}</div><div class="highlight">${fullMonthObj[`date${i}`].asr}</div><div class="highlight">${fullMonthObj[`date${i}`].maghrib}</div><div class="highlight">${fullMonthObj[`date${i}`].isha}</div>`;
                     } else {
-                        document.querySelector('.monthview .prayer-month-time').innerHTML += `<div>${i}</div><div>${fullMonthObj[`date${i}`].fajr}</div><div>${fullMonthObj[`date${i}`].dhuhr}</div><div>${fullMonthObj[`date${i}`].asr}</div><div>${fullMonthObj[`date${i}`].maghrib}</div><div>${fullMonthObj[`date${i}`].isha}</div>`;
+                        document.querySelector('.monthview .prayer-month-time').innerHTML += `<div>${i}<sup>${fullMonthObj[`date${i}`].hijri_day}</sup></div><div>${fullMonthObj[`date${i}`].fajr}</div><div>${fullMonthObj[`date${i}`].dhuhr}</div><div>${fullMonthObj[`date${i}`].asr}</div><div>${fullMonthObj[`date${i}`].maghrib}</div><div>${fullMonthObj[`date${i}`].isha}</div>`;
                     }
                 }
 
