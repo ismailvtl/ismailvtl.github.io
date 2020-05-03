@@ -229,7 +229,7 @@ select#location {
     font-weight: 700;
 }
 
-.prayer-month-time>div:nth-child(3n+2),
+.prayer-month-time>div.ramadan,
 .prayer-month-title>:nth-child(3n+2) {
     background: #f1f1f1;
     color: #555;
