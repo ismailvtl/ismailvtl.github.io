@@ -53,7 +53,7 @@ function fetchMonthDates(city, monthNumber) {
                     } else if (fullMonthObj[`date${i}`].hijri_month == "Ramadan"){
                         document.querySelector('.monthview .prayer-month-time').innerHTML += `<div>${i}<sup>${fullMonthObj[`date${i}`].hijri_day}</sup></div><div class="ramadan">${fullMonthObj[`date${i}`].fajr}</div><div>${fullMonthObj[`date${i}`].dhuhr}</div><div>${fullMonthObj[`date${i}`].asr}</div><div class="ramadan">${fullMonthObj[`date${i}`].maghrib}</div><div>${fullMonthObj[`date${i}`].isha}</div>`;
                     } else {
-                        document.querySelector('.monthview .prayer-month-time').innerHTML += `<div>${i}<sup>${fullMonthObj[`date${i}`].hijri_day}</sup></div><div>${fullMonthObj[`date${i}`].fajr}</div><div>${fullMonthObj[`date${i}`].dhuhr}</div><div>${fullMonthObj[`date${i}`].asr}</div><div>${fullMonthObj[`date${i}`].maghrib}</div><div>${fullMonthObj[`date${i}`].isha}</div>`;
+                        document.querySelector('.monthview .prayer-month-time').innerHTML += `<div>${i}</div><div>${fullMonthObj[`date${i}`].fajr}</div><div>${fullMonthObj[`date${i}`].dhuhr}</div><div>${fullMonthObj[`date${i}`].asr}</div><div>${fullMonthObj[`date${i}`].maghrib}</div><div>${fullMonthObj[`date${i}`].isha}</div>`;
                     
                     }
                 }
