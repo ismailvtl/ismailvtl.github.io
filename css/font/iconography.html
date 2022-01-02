@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Iconography - Wasalt</title>
+		<style>
+			* {
+                margin: 0;
+                padding: 0;
+            }
+			body {
+				font-family: HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+				margin: 0;
+			}
+			.page-title {
+				text-align: center;
+				margin: 20px 0;
+			}
+			.iconography {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 20px 0;
+                box-sizing: border-box;
+                margin: auto;
+                max-width: 1100px;
+                justify-content: flex-start;
+            }
+
+            .iconography .icon-item .icon {
+                display: inline-block;
+				font-size: 128px;
+				color: #666;
+				text-align: center;
+                font-size: 80px;
+            }
+            .iconography .icon-item .icon.small-size {
+                font-size: 64px;
+            }
+            .iconography .icon-item {
+                min-width: 160px;
+                max-width: 160px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 30px;
+                padding: 0 10px;
+                text-align: center;
+            }
+
+            .iconography .icon-item span {
+                margin: 10px 0;
+                color: #555;
+            }
+
+            .iconography-search {
+                max-width: 1100px;
+                margin: 0 auto 30px;
+                display: flex;
+                background: #e8e8e8;
+                padding: 12px;
+                box-sizing: border-box;
+                position: sticky;
+                top: 0;
+                flex-wrap: wrap;
+            }
+
+            .iconography-search #input-search {
+                flex: 1;
+                padding: 16px 20px;
+                width: 100%;
+                border: 1px solid #999;
+                font-size: 20px;
+                box-sizing: border-box;
+                color: #333;
+            }
+
+            .iconography-search #input-search:focus {
+               outline: 1px solid #555; 
+            }
+
+            .iconography-search button {
+                width: 120px;
+                font-size: 16px;
+                margin-left: 20px;
+                border: none;
+                background: #c60c30;
+                color: #FFF;
+            }
+
+            .iconography.filtering {
+                justify-content: center;    
+            }
+
+            .iconography.toggle-size .icon-item .icon {
+                font-size: 48px;
+            }
+
+            .iconography.toggle-name .icon-item span{
+                display: none;
+            }
+            @media screen and (max-width: 1023px) {
+                .iconography {
+                    justify-content: space-evenly;
+                }
+                .iconography .icon-item {
+                    min-width: 100px;
+                    max-width: 100px
+                }
+                .iconography .icon-item span {
+                    font-size: 14px;
+                }
+            }
+
+			@font-face {
+	font-family: "iconography";
+	src: url("iconography.woff2?48bb5a39fd052b16f9fbac7b11a354f2") format("woff2"),
+url("iconography.woff?48bb5a39fd052b16f9fbac7b11a354f2") format("woff"),
+url("iconography.ttf?48bb5a39fd052b16f9fbac7b11a354f2") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: fallback;
+}
+
+.icon {
+	line-height: 1;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.icon:before {
+	font-family: "iconography" !important;
+	text-transform: none;
+	font-style: normal !important;
+	font-weight: normal !important;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-age-of-building:before {
+	content: "\2d51";
+}
+.icon-apartment:before {
+	content: "\2d53";
+}
+.icon-arrow-back:before {
+	content: "\2d54";
+}
+.icon-arrow-down-circle:before {
+	content: "\2d55";
+}
+.icon-arrow-down:before {
+	content: "\2d56";
+}
+.icon-arrow-filled-down:before {
+	content: "\2d57";
+}
+.icon-balcony:before {
+	content: "\2d58";
+}
+.icon-basketball:before {
+	content: "\2d59";
+}
+.icon-bathroom:before {
+	content: "\2d5a";
+}
+.icon-bedroom:before {
+	content: "\2d5b";
+}
+.icon-building:before {
+	content: "\2d5c";
+}
+.icon-builtup-area:before {
+	content: "\2d5d";
+}
+.icon-call:before {
+	content: "\2d5e";
+}
+.icon-cctv-camera:before {
+	content: "\2d5f";
+}
+.icon-central-ac:before {
+	content: "\2d60";
+}
+.icon-chalt:before {
+	content: "\2d61";
+}
+.icon-check-cricle:before {
+	content: "\2d62";
+}
+.icon-chimney:before {
+	content: "\2d63";
+}
+.icon-cinema-room:before {
+	content: "\2d64";
+}
+.icon-close-light:before {
+	content: "\2d65";
+}
+.icon-close:before {
+	content: "\2d66";
+}
+.icon-double-glazing-window:before {
+	content: "\2d67";
+}
+.icon-driver-room:before {
+	content: "\2d68";
+}
+.icon-duplex:before {
+	content: "\2d69";
+}
+.icon-elevator:before {
+	content: "\2d6a";
+}
+.icon-facebook:before {
+	content: "\2d6b";
+}
+.icon-farm:before {
+	content: "\2d6c";
+}
+.icon-filter:before {
+	content: "\2d6d";
+}
+.icon-fire-alarm:before {
+	content: "\2d6e";
+}
+.icon-fitted-kitchen:before {
+	content: "\2d6f";
+}
+.icon-flooring:before {
+	content: "\2d70";
+}
+.icon-football:before {
+	content: "\2d71";
+}
+.icon-furniture:before {
+	content: "\2d72";
+}
+.icon-garden:before {
+	content: "\2d73";
+}
+.icon-globe:before {
+	content: "\2d74";
+}
+.icon-guest-room:before {
+	content: "\2d75";
+}
+.icon-gym:before {
+	content: "\2d76";
+}
+.icon-hospital:before {
+	content: "\2d77";
+}
+.icon-indoor-parking:before {
+	content: "\2d78";
+}
+.icon-indoor-pool:before {
+	content: "\2d79";
+}
+.icon-instagram:before {
+	content: "\2d7a";
+}
+.icon-insulated-properly:before {
+	content: "\2d7b";
+}
+.icon-kitchen-bar:before {
+	content: "\2d7c";
+}
+.icon-kitchen:before {
+	content: "\2d7d";
+}
+.icon-land-area:before {
+	content: "\2d7e";
+}
+.icon-land:before {
+	content: "\2d7f";
+}
+.icon-language-selector:before {
+	content: "\2d80";
+}
+.icon-laundry-room:before {
+	content: "\2d81";
+}
+.icon-linkedin:before {
+	content: "\2d82";
+}
+.icon-living-room:before {
+	content: "\2d83";
+}
+.icon-maid-room:before {
+	content: "\2d84";
+}
+.icon-map-marker:before {
+	content: "\2d85";
+}
+.icon-map-view:before {
+	content: "\2d86";
+}
+.icon-marble-flooring:before {
+	content: "\2d87";
+}
+.icon-mosque:before {
+	content: "\2d88";
+}
+.icon-outdoor-pool:before {
+	content: "\2d89";
+}
+.icon-palace:before {
+	content: "\2d8a";
+}
+.icon-post-property:before {
+	content: "\2d8b";
+}
+.icon-price:before {
+	content: "\2d8c";
+}
+.icon-profile:before {
+	content: "\2d8d";
+}
+.icon-rent-house:before {
+	content: "\2d8e";
+}
+.icon-restaurant:before {
+	content: "\2d8f";
+}
+.icon-rooftop:before {
+	content: "\2d91";
+}
+.icon-sauna:before {
+	content: "\2d92";
+}
+.icon-schedule:before {
+	content: "\2d93";
+}
+.icon-school:before {
+	content: "\2d94";
+}
+.icon-sea-view:before {
+	content: "\2d95";
+}
+.icon-security:before {
+	content: "\2d96";
+}
+.icon-share:before {
+	content: "\2d97";
+}
+.icon-shop:before {
+	content: "\2d98";
+}
+.icon-smart-home-1:before {
+	content: "\2d99";
+}
+.icon-smart-home-2:before {
+	content: "\2d9a";
+}
+.icon-solar-system:before {
+	content: "\2d9b";
+}
+.icon-staircase:before {
+	content: "\2d9c";
+}
+.icon-storage-room:before {
+	content: "\2d9d";
+}
+.icon-tennis:before {
+	content: "\2d9e";
+}
+.icon-terrace:before {
+	content: "\2d9f";
+}
+.icon-three-dots:before {
+	content: "\2da0";
+}
+.icon-tiktok:before {
+	content: "\2da1";
+}
+.icon-twitter:before {
+	content: "\2da2";
+}
+.icon-two-entrance:before {
+	content: "\2da3";
+}
+.icon-villa:before {
+	content: "\2da5";
+}
+.icon-walkin-closet:before {
+	content: "\2da6";
+}
+.icon-wallpaper:before {
+	content: "\2da7";
+}
+.icon-wardrobe:before {
+	content: "\2da8";
+}
+.icon-watched:before {
+	content: "\2da9";
+}
+.icon-water-tank:before {
+	content: "\2daa";
+}
+.icon-window-ac:before {
+	content: "\2dab";
+}
+.icon-youtube:before {
+	content: "\2dac";
+}
+.icon-app-download:before {
+	content: "\2dad";
+}
+.icon-chalet:before {
+	content: "\2dae";
+}
+.icon-check-circle:before {
+	content: "\2daf";
+}
+.icon-maid:before {
+	content: "\2db0";
+}
+.icon-question:before {
+	content: "\2db1";
+}
+.icon-question-filled:before {
+	content: "\2db2";
+}
+.icon-information:before {
+	content: "\2db3";
+}
+.icon-information-filled:before {
+	content: "\2db4";
+}
+.icon-menu:before {
+	content: "\2db5";
+}
+.icon-minus:before {
+	content: "\2db6";
+}
+.icon-plus:before {
+	content: "\2db7";
+}
+.icon-search:before {
+	content: "\2db8";
+}
+.icon-error:before {
+	content: "\2db9";
+}
+.icon-tooltip:before {
+	content: "\2dba";
+}
+.icon-chevron-left:before {
+	content: "\2dbb";
+}
+.icon-chevron-right:before {
+	content: "\2dbc";
+}
+.icon-chevron-down:before {
+	content: "\2dbd";
+}
+.icon-chevron-up:before {
+	content: "\2dbe";
+}
+.icon-download:before {
+	content: "\2dbf";
+}
+.icon-pdf-file:before {
+	content: "\2dc0";
+}
+.icon-globe-map:before {
+	content: "\2dc1";
+}
+.icon-padlock:before {
+	content: "\2dc2";
+}
+.icon-refresh:before {
+	content: "\2dc3";
+}
+.icon-time:before {
+	content: "\2dc4";
+}
+.icon-wifi:before {
+	content: "\2dc5";
+}
+.icon-calendar-month:before {
+	content: "\2dc6";
+}
+.icon-check:before {
+	content: "\2dc7";
+}
+.icon-auction-debit:before {
+	content: "\2dc8";
+}
+.icon-auction-reverse:before {
+	content: "\2dc9";
+}
+.icon-warning:before {
+	content: "\2dca";
+}
+.icon-heart:before {
+	content: "\2dcb";
+}
+.icon-heart-filled:before {
+	content: "\2dcc";
+}
+.icon-view-360:before {
+	content: "\2dcd";
+}
+.icon-floor-plan:before {
+	content: "\2dce";
+}
+
+		</style>
+
+	</head>
+	<body>
+		<h1 class="page-title">Iconography</h1>
+		 <div class="iconography-search">
+            <input type="text" id="input-search" onkeyup="search()" placeholder="Search icon..."/>
+        </div>
+
+		<div class="iconography">
+					<div class="icon-item">
+						<div class="icon icon-age-of-building"></div>
+						<span>age-of-building</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-apartment"></div>
+						<span>apartment</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-app-download"></div>
+						<span>app-download</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-arrow-back"></div>
+						<span>arrow-back</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-arrow-down-circle"></div>
+						<span>arrow-down-circle</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-arrow-down"></div>
+						<span>arrow-down</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-arrow-filled-down"></div>
+						<span>arrow-filled-down</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-auction-debit"></div>
+						<span>auction-debit</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-auction-reverse"></div>
+						<span>auction-reverse</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-balcony"></div>
+						<span>balcony</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-basketball"></div>
+						<span>basketball</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-bathroom"></div>
+						<span>bathroom</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-bedroom"></div>
+						<span>bedroom</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-building"></div>
+						<span>building</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-builtup-area"></div>
+						<span>builtup-area</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-calendar-month"></div>
+						<span>calendar-month</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-call"></div>
+						<span>call</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-cctv-camera"></div>
+						<span>cctv-camera</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-central-ac"></div>
+						<span>central-ac</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-chalet"></div>
+						<span>chalet</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-check-circle"></div>
+						<span>check-circle</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-check"></div>
+						<span>check</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-chevron-down"></div>
+						<span>chevron-down</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-chevron-left"></div>
+						<span>chevron-left</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-chevron-right"></div>
+						<span>chevron-right</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-chevron-up"></div>
+						<span>chevron-up</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-chimney"></div>
+						<span>chimney</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-cinema-room"></div>
+						<span>cinema-room</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-close"></div>
+						<span>close</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-double-glazing-window"></div>
+						<span>double-glazing-window</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-download"></div>
+						<span>download</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-driver-room"></div>
+						<span>driver-room</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-duplex"></div>
+						<span>duplex</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-elevator"></div>
+						<span>elevator</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-error"></div>
+						<span>error</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-facebook"></div>
+						<span>facebook</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-farm"></div>
+						<span>farm</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-filter"></div>
+						<span>filter</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-fire-alarm"></div>
+						<span>fire-alarm</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-fitted-kitchen"></div>
+						<span>fitted-kitchen</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-floor-plan"></div>
+						<span>floor-plan</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-flooring"></div>
+						<span>flooring</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-football"></div>
+						<span>football</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-furniture"></div>
+						<span>furniture</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-garden"></div>
+						<span>garden</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-globe-map"></div>
+						<span>globe-map</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-globe"></div>
+						<span>globe</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-guest-room"></div>
+						<span>guest-room</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-gym"></div>
+						<span>gym</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-heart-filled"></div>
+						<span>heart-filled</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-heart"></div>
+						<span>heart</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-hospital"></div>
+						<span>hospital</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-indoor-parking"></div>
+						<span>indoor-parking</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-indoor-pool"></div>
+						<span>indoor-pool</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-information-filled"></div>
+						<span>information-filled</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-information"></div>
+						<span>information</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-instagram"></div>
+						<span>instagram</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-insulated-properly"></div>
+						<span>insulated-properly</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-kitchen-bar"></div>
+						<span>kitchen-bar</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-kitchen"></div>
+						<span>kitchen</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-land-area"></div>
+						<span>land-area</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-land"></div>
+						<span>land</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-language-selector"></div>
+						<span>language-selector</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-laundry-room"></div>
+						<span>laundry-room</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-linkedin"></div>
+						<span>linkedin</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-living-room"></div>
+						<span>living-room</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-maid-room"></div>
+						<span>maid-room</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-maid"></div>
+						<span>maid</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-map-marker"></div>
+						<span>map-marker</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-map-view"></div>
+						<span>map-view</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-marble-flooring"></div>
+						<span>marble-flooring</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-menu"></div>
+						<span>menu</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-minus"></div>
+						<span>minus</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-mosque"></div>
+						<span>mosque</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-outdoor-pool"></div>
+						<span>outdoor-pool</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-padlock"></div>
+						<span>padlock</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-palace"></div>
+						<span>palace</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-pdf-file"></div>
+						<span>pdf-file</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-plus"></div>
+						<span>plus</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-post-property"></div>
+						<span>post-property</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-price"></div>
+						<span>price</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-profile"></div>
+						<span>profile</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-question-filled"></div>
+						<span>question-filled</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-question"></div>
+						<span>question</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-refresh"></div>
+						<span>refresh</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-rent-house"></div>
+						<span>rent-house</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-restaurant"></div>
+						<span>restaurant</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-rooftop"></div>
+						<span>rooftop</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-sauna"></div>
+						<span>sauna</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-schedule"></div>
+						<span>schedule</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-school"></div>
+						<span>school</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-sea-view"></div>
+						<span>sea-view</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-search"></div>
+						<span>search</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-security"></div>
+						<span>security</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-share"></div>
+						<span>share</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-shop"></div>
+						<span>shop</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-smart-home-1"></div>
+						<span>smart-home-1</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-smart-home-2"></div>
+						<span>smart-home-2</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-solar-system"></div>
+						<span>solar-system</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-staircase"></div>
+						<span>staircase</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-storage-room"></div>
+						<span>storage-room</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-tennis"></div>
+						<span>tennis</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-terrace"></div>
+						<span>terrace</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-three-dots"></div>
+						<span>three-dots</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-tiktok"></div>
+						<span>tiktok</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-time"></div>
+						<span>time</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-tooltip"></div>
+						<span>tooltip</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-twitter"></div>
+						<span>twitter</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-two-entrance"></div>
+						<span>two-entrance</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-view-360"></div>
+						<span>view-360</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-villa"></div>
+						<span>villa</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-walkin-closet"></div>
+						<span>walkin-closet</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-wallpaper"></div>
+						<span>wallpaper</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-wardrobe"></div>
+						<span>wardrobe</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-warning"></div>
+						<span>warning</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-watched"></div>
+						<span>watched</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-water-tank"></div>
+						<span>water-tank</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-wifi"></div>
+						<span>wifi</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-window-ac"></div>
+						<span>window-ac</span>
+					</div>
+					<div class="icon-item">
+						<div class="icon icon-youtube"></div>
+						<span>youtube</span>
+					</div>
+		</div>
+
+		<script type="text/javascript">
+			//filters
+			const urlParams = new URLSearchParams(window.location.search);
+			const inIframe = urlParams.get('iframe');
+			let titleEl = document.querySelector('.page-title');
+
+			if (titleEl && inIframe === "true") {
+				document.querySelector('.page-title').style.display = "none";
+			}
+			
+			//search keydown function
+			function search() {          
+				var input, filter, span, i, txtValue, container;
+				input = document.querySelector('#input-search');
+				container = document.querySelector('.iconography');
+				filter = input.value.toUpperCase();
+				iconDiv = document.querySelectorAll(".icon-item");
+				for (i = 0; i < iconDiv.length; i++) {
+					span = iconDiv[i].getElementsByTagName("span")[0];
+					txtValue = span.textContent || span.innerText;
+					if (txtValue.toUpperCase().indexOf(filter) > -1) {
+						iconDiv[i].style.display = "";
+						container.classList.remove('filtering');
+					} else {
+						iconDiv[i].style.display = "none";
+						container.classList.add('filtering');
+					}
+				}
+			}
+	        </script>
+	</body>
+</html>
