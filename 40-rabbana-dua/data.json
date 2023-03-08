@@ -1,0 +1,37 @@
+[
+    {
+     "id" : 1,
+     "arabic": "رَبَّنَا تَقَبَّلْ مِنَّآ ۖ إِنَّكَ أَنتَ ٱلسَّمِيعُ ٱلْعَلِيم",
+      "translation": "Our Lord, accept [this] from us. Indeed, You are the Hearing, the Knowing.",
+      "transliteration": "Rabbana Taqabbal Minna Innaka Antas Sameeaul Aleem.",
+      "refno": "2:127"
+    },
+    {
+        "id" : 2,
+        "arabic": "رَبَّنَا وَٱجْعَلْنَا مُسْلِمَيْنِ لَكَ وَمِن ذُرِّيَّتِنَآ أُمَّةً مُّسْلِمَةً لَّكَ وَأَرِنَا مَنَاسِكَنَا وَتُبْ عَلَيْنَآ ۖ إِنَّكَ أَنتَ ٱلتَّوَّابُ ٱلرَّحِيمُ",
+         "translation": "Our Lord, and make us Muslims [in submission] to You and from our descendants a Muslim nation [in submission] to You. And show us our rites [of worship] and accept our repentance. Indeed, You are the Accepting of Repentance, the Merciful.",
+         "transliteration": "Rabbana Wa-J'alna Muslimaini Laka Wa Min Dhurriyatina 'Ummatan Muslimatan Laka Wa 'Arina Manasikana Wa Tub 'Alaina 'Innaka 'Antat-Tawwabu-Raheem.",
+         "refno": "2:128"
+    },
+    {
+        "id" : 3,
+        "arabic": "رَبَّنَآ ءَاتِنَا فِى ٱلدُّنْيَا حَسَنَةً وَفِى ٱلْـَٔاخِرَةِ حَسَنَةً وَقِنَا عَذَابَ ٱلنَّارِ",
+         "translation": "Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.",
+         "transliteration": "Rabbana Atina Fid-Dunya Hasanatan Wa Fil 'Akhirati Hasanatan Waqina 'Adhaban-Nar.",
+         "refno": "2:201"
+    },
+    {
+        "id" : 4,
+        "arabic": "رَبَّنَآ أَفْرِغْ عَلَيْنَا صَبْرًا وَثَبِّتْ أَقْدَامَنَا وَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَـٰفِرِينَ",
+         "translation": "Our Lord, pour upon us patience and plant firmly our feet and give us victory over the disbelieving people.",
+         "transliteration": "Rabbana Afrigh 'Alaina Sabran Wa Thabbit Aqdamana Wansurna 'Alal-Qawmil- Kafirin.",
+         "refno": "2:250"
+    },
+    {
+        "id" : 5,
+        "arabic": "رَبَّنَا لَا تُؤَاخِذْنَآ إِن نَّسِينَآ أَوْ أَخْطَأْنَا",
+         "translation": "Our Lord, do not impose blame upon us if we have forgotten or erred.",
+         "transliteration": "Rabbana La Tu'akhidhna In-Nasina Aw Akhta'na.",
+         "refno": "2:286"
+    }
+]

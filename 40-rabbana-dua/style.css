@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    -webkit-user-select: none;
+    user-select: none;
+    overscroll-behavior: contain;
+}
+
+.dua-container {
+    max-width: 768px;
+    margin: auto;
+    background: #fcfcfc;
+    position: relative;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #222222;
+}
+
+header {
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFF;
+    box-sizing: border-box;
+    height: 60px;
+    box-shadow: 0px 2px 10px #dedede;
+}
+.dua-list-item-arabic {
+    font-family: 'Noto Sans Arabic', sans-serif;
+    text-align: right;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.dua-list-item {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #ddd;
+    padding-top: 24px;
+    gap: 16px;
+}
+.dua-list-item-translation, .dua-list-item-transliteration {
+    display: none;
+    font-size: 14px;
+    color: #666;
+}
+
+
+.dua-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px 24px 30px;
+    box-sizing: border-box;
+}
+
+.dua-list-item:first-child {
+    border-top: 0;
+    padding-top: 8px;
+}
+
+.dua-list-item-quran-reference {
+    color: #999;
+    font-size: 12px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    background: #00665E;
+    z-index: 999;
+    max-width: 768px;
+}
+
+main {
+    height: calc(100% - 60px - 80px);
+    position: fixed;
+    top: 60px;
+    overflow: auto;
+}
+
+.audio-player {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.audio-player audio {
+    width: 96%;
+    margin: auto;
+}

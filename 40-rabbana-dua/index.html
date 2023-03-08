@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40 Rabba Dua - Prayer Time UAE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dua-container">
+        <header>
+            <div class="title">40 Rabbana Dua</div>
+            <div class="actions">
+                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10Zm0-11.414L9.172 7.757 7.757 9.172 10.586 12l-2.829 2.828 1.415 1.415L12 13.414l2.828 2.829 1.415-1.415L13.414 12l2.829-2.828-1.415-1.415L12 10.586Z" fill="#444"></path></svg>
+            </div>
+        </header>
+        <main>
+            <div class="dua-list">
+                
+            </div>
+        </main>
+        <footer>
+            <div class="audio-player">
+                <audio id="audioEl" controls>
+                    <source src="40-Rabbana.mp3" type="audio/mpeg">
+                  </audio>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+    let duaContainer = document.querySelector('.dua-list');
+    // let duaListItem = duaContainer.querySelector('.dua-list-item');
+    // let duaListItemArabicEl = duaListItem.querySelector('.dua-list-item-arabic');
+    // let duaListItemQuranReference = duaListItem.querySelector('.dua-list-item-quran-reference');
+    // let duaListItemTranslationEl = duaListItem.querySelector('.dua-list-item-translation');
+    // let duaListItemTransliterationEl = duaListItem.querySelector('.dua-list-item-transliteration');
+
+    fetch(`data.json`)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(json){
+        console.log(json);
+        for(const dua of json) {
+        duaContainer.innerHTML += `<div class="dua-list-item">
+            <div class="dua-list-item-quran-reference">${dua.refno}</div>
+                    <div class="dua-list-item-arabic"><span>${dua.arabic}</span></div>
+                    <div class="dua-list-item-transliteration">${dua.transliteration}</div>
+                    <div class="dua-list-item-translation">${dua.translation}</div>
+                </div>`;
+            }
+    });
+
+    var audioEl = document.getElementById("audioEl");
+    audioEl.playbackRate = 1.5;
+
+    </script>
+</body>
+</html>
