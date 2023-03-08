@@ -50,12 +50,16 @@ header {
     padding-top: 24px;
     gap: 16px;
 }
-.dua-list-item-translation, .dua-list-item-transliteration {
-    display: none;
+.dua-list-item-transliteration {
     font-size: 14px;
     color: #666;
 }
 
+.dua-list-item-translation {
+     font-size: 14px;
+    color: #666;
+     display: none;
+}
 
 .dua-list {
     display: flex;
