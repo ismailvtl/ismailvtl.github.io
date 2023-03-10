@@ -10,9 +10,19 @@
 <body>
     <div class="dua-container">
         <header>
-            <div class="title">40 Rabbana Dua</div>
+            <div class="title">
+                <span class="icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.828 11H20v2H7.828l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414L7.828 11Z" fill="#444"></path></svg></span>
+                <span>40 Rabbana Dua</span>
+            </div>
             <div class="actions">
-                <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10Zm0-11.414L9.172 7.757 7.757 9.172 10.586 12l-2.829 2.828 1.415 1.415L12 13.414l2.828 2.829 1.415-1.415L13.414 12l2.829-2.828-1.415-1.415L12 10.586Z" fill="#444"></path></svg>
+                <button class="dots"><svg width="4" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="#444"></circle><circle cx="2" cy="8" r="2" fill="#444"></circle><circle cx="2" cy="14" r="2" fill="#444"></circle></svg></button>
+
+                <div class="options">
+                    <ul>
+                        <li><button id="enableTranslation"><span>Translation: <span class="themeText">OFF</span></span></button></li>
+                        <li><button id="enableTransliteration"><span>Transliteration: <span class="themeText">OFF</span></span></button></li>
+                    </ul>
+                </div>
             </div>
         </header>
         <main>
@@ -27,6 +37,7 @@
                   </audio>
             </div>
         </footer>
+        <section class="overlay" style="display: none;"></section>
     </div>
 
     <script>
@@ -54,7 +65,79 @@
     });
 
     var audioEl = document.getElementById("audioEl");
-    audioEl.playbackRate = 1.25;
+    audioEl.playbackRate = 1.5;
+    let overLay = document.querySelector('.overlay');
+
+    document.querySelector('.dots').addEventListener('click', function(){
+        document.querySelector('body').classList.add('options-opened');
+        overLay.style.display = "block";
+    });
+
+    overLay.addEventListener('click', function(){   
+        overLay.style.display = "none";
+        document.querySelector('body').classList.remove('options-opened');
+    });
+
+    document.querySelector('.title .icon').addEventListener('click', function(){
+        window.location.href ="https://prayertimeuae.com";
+    });
+
+    //enable translation
+    document.querySelector('#enableTranslation').addEventListener('click', function(){
+        toggleTranslation();
+    });
+
+    function checkTranslationLocalStorage(){
+        if(localStorage.getItem("rabbanaDuaTranslation")!=null && localStorage.getItem("rabbanaDuaTranslation") === 'ON') {
+            document.querySelector('#enableTranslation .themeText').textContent = "ON";
+            document.querySelector('.dua-list').classList.add('translations-enabled');
+        } else { 
+            document.querySelector('#enableTranslation .themeText').textContent = "OFF";
+            document.querySelector('.dua-list').classList.remove('translations-enabled');
+        }
+    }
+
+    function checkTransliterationLocalStorage(){
+        if(localStorage.getItem("rabbanaDuaTransliteration")!=null && localStorage.getItem("rabbanaDuaTransliteration") === 'ON') {
+            document.querySelector('#enableTransliteration .themeText').textContent = "ON";
+            document.querySelector('.dua-list').classList.add('transliteration-enabled');
+        } else { 
+            document.querySelector('#enableTransliteration .themeText').textContent = "OFF";
+            document.querySelector('.dua-list').classList.remove('transliteration-enabled');
+        }
+    }
+
+    function toggleTranslation(){
+        if(localStorage.getItem("rabbanaDuaTranslation")!=null && localStorage.getItem("rabbanaDuaTranslation") === 'ON') {
+            localStorage.setItem("rabbanaDuaTranslation", "OFF");
+            document.querySelector('#enableTranslation .themeText').textContent = "OFF";
+            document.querySelector('.dua-list').classList.remove('translations-enabled');
+        } else { 
+            localStorage.setItem("rabbanaDuaTranslation", "ON");
+            document.querySelector('#enableTranslation .themeText').textContent = "ON";
+            document.querySelector('.dua-list').classList.add('translations-enabled');
+        }   
+    }
+
+    function toggleTransliteration(){
+        if(localStorage.getItem("rabbanaDuaTransliteration")!=null && localStorage.getItem("rabbanaDuaTransliteration") === 'ON') {
+            localStorage.setItem("rabbanaDuaTransliteration", "OFF");
+            document.querySelector('#enableTransliteration .themeText').textContent = "OFF";
+            document.querySelector('.dua-list').classList.remove('transliteration-enabled');
+        } else { 
+            localStorage.setItem("rabbanaDuaTransliteration", "ON");
+            document.querySelector('#enableTransliteration .themeText').textContent = "ON";
+            document.querySelector('.dua-list').classList.add('transliteration-enabled');
+        }   
+    }
+
+
+    document.querySelector('#enableTransliteration').addEventListener('click', function(){
+        toggleTransliteration();
+    });
+
+    checkTranslationLocalStorage();
+    checkTransliterationLocalStorage();
 
     </script>
 </body>
