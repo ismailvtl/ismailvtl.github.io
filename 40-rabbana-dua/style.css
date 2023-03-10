@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400&display=swap');
 
 * {
     margin: 0;
@@ -24,6 +24,7 @@ html,body {
     font-size: 22px;
     font-weight: 600;
     color: #222222;
+    display: flex;
 }
 
 header {
@@ -35,12 +36,17 @@ header {
     box-sizing: border-box;
     height: 60px;
     box-shadow: 0px 2px 10px #dedede;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 768px;
 }
 .dua-list-item-arabic {
-    font-family: 'Noto Sans Arabic', sans-serif;
+    font-family: 'Lateef', serif;
     text-align: right;
-    font-size: 20px;
-    line-height: 36px;
+    font-size: 30px;
+    line-height: 46px;
+    color: #313131;
 }
 
 .dua-list-item {
@@ -50,16 +56,12 @@ header {
     padding-top: 24px;
     gap: 16px;
 }
-.dua-list-item-transliteration {
+.dua-list-item-translation, .dua-list-item-transliteration {
+    display: none;
     font-size: 14px;
     color: #666;
 }
 
-.dua-list-item-translation {
-     font-size: 14px;
-    color: #666;
-     display: none;
-}
 
 .dua-list {
     display: flex;
@@ -77,6 +79,7 @@ header {
 .dua-list-item-quran-reference {
     color: #999;
     font-size: 12px;
+    text-align: right;
 }
 
 footer {
@@ -94,6 +97,8 @@ main {
     position: fixed;
     top: 60px;
     overflow: auto;
+    z-index: -1;
+    max-width: 768px;
 }
 
 .audio-player {
@@ -105,4 +110,128 @@ main {
 .audio-player audio {
     width: 96%;
     margin: auto;
+}
+
+.dots {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background: none;
+}
+
+header .icon {
+    display: flex;
+    margin-right: 12px;
+}
+
+.options {
+    position: absolute;
+    top: 50px;
+    background: #fff;
+    padding: 10px;
+    right: 20px;
+    background: #FFFFFF;
+    border: 1px solid #E5E5E6;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 30px rgba(161, 168, 191, 0.4);
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: none;
+    min-width: 200px;
+}
+
+body.options-opened .options {
+    display: flex;
+    z-index: 10;
+}
+
+
+
+body.options-opened .overlay {
+    display: block;
+    background: transparent;
+}
+.options ul {
+    list-style: none;
+}
+
+.options ul button {
+    background: none;
+    border: 0;
+    font-size: 16px;
+    color: #444;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.options ul li {
+    margin: 8px 0 0;
+}
+
+.options ul li:first-child {
+    margin: 0;
+}
+
+.options ul button .icon {
+    margin-right: 10px;
+}
+
+.options ul button .icon svg {
+    height: 20px;
+    width: 20px;
+}
+
+body.options-opened .overlay {
+    display: block;
+    background: transparent;
+}
+
+section.overlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgb(0 0 0 / 40%);
+    z-index: -1;
+    display: none;
+    /* backdrop-filter: blur(2.5px); */
+}
+
+.options-opened footer {
+    z-index: -1;
+}
+
+
+section.drawer {
+    position: absolute;
+    height: 80vh;
+    bottom: 0;
+    background: white;
+    width: 100vw;
+    z-index: 3;
+    transform: translateY(100%);
+    transition: transform 0.4s;
+    padding: 0 20px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+}
+
+section.drawer.active {
+    transform: translateY(0);
+    overflow: auto;
+}
+
+.dua-list.translations-enabled .dua-list-item-translation {
+    display: flex;
+}
+
+.dua-list.transliteration-enabled .dua-list-item-transliteration {
+    display: flex;
 }
