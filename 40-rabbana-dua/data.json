@@ -4,34 +4,281 @@
      "arabic": "رَبَّنَا تَقَبَّلْ مِنَّآ ۖ إِنَّكَ أَنتَ ٱلسَّمِيعُ ٱلْعَلِيم",
       "translation": "Our Lord, accept [this] from us. Indeed, You are the Hearing, the Knowing.",
       "transliteration": "Rabbana Taqabbal Minna Innaka Antas Sameeaul Aleem.",
-      "refno": "2:127"
+      "refno": "2:127 - Al-Baqarah"
     },
     {
         "id" : 2,
         "arabic": "رَبَّنَا وَٱجْعَلْنَا مُسْلِمَيْنِ لَكَ وَمِن ذُرِّيَّتِنَآ أُمَّةً مُّسْلِمَةً لَّكَ وَأَرِنَا مَنَاسِكَنَا وَتُبْ عَلَيْنَآ ۖ إِنَّكَ أَنتَ ٱلتَّوَّابُ ٱلرَّحِيمُ",
          "translation": "Our Lord, and make us Muslims [in submission] to You and from our descendants a Muslim nation [in submission] to You. And show us our rites [of worship] and accept our repentance. Indeed, You are the Accepting of Repentance, the Merciful.",
          "transliteration": "Rabbana Wa-J'alna Muslimaini Laka Wa Min Dhurriyatina 'Ummatan Muslimatan Laka Wa 'Arina Manasikana Wa Tub 'Alaina 'Innaka 'Antat-Tawwabu-Raheem.",
-         "refno": "2:128"
+         "refno": "2:128 - Al-Baqarah"
     },
     {
         "id" : 3,
         "arabic": "رَبَّنَآ ءَاتِنَا فِى ٱلدُّنْيَا حَسَنَةً وَفِى ٱلْـَٔاخِرَةِ حَسَنَةً وَقِنَا عَذَابَ ٱلنَّارِ",
          "translation": "Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.",
          "transliteration": "Rabbana Atina Fid-Dunya Hasanatan Wa Fil 'Akhirati Hasanatan Waqina 'Adhaban-Nar.",
-         "refno": "2:201"
+         "refno": "2:201 - Al-Baqarah"
     },
     {
         "id" : 4,
         "arabic": "رَبَّنَآ أَفْرِغْ عَلَيْنَا صَبْرًا وَثَبِّتْ أَقْدَامَنَا وَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَـٰفِرِينَ",
          "translation": "Our Lord, pour upon us patience and plant firmly our feet and give us victory over the disbelieving people.",
          "transliteration": "Rabbana Afrigh 'Alaina Sabran Wa Thabbit Aqdamana Wansurna 'Alal-Qawmil- Kafirin.",
-         "refno": "2:250"
+         "refno": "2:250 - Al-Baqarah"
     },
     {
         "id" : 5,
         "arabic": "رَبَّنَا لَا تُؤَاخِذْنَآ إِن نَّسِينَآ أَوْ أَخْطَأْنَا",
          "translation": "Our Lord, do not impose blame upon us if we have forgotten or erred.",
          "transliteration": "Rabbana La Tu'akhidhna In-Nasina Aw Akhta'na.",
-         "refno": "2:286"
+         "refno": "2:286 - Al-Baqarah"
+    },
+    {
+        "id" : 6,
+        "arabic": "رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ إِصْرًا كَمَا حَمَلْتَهُۥ عَلَى ٱلَّذِينَ مِن قَبْلِنَا",
+         "translation": "Our Lord, and lay not upon us a burden like that which You laid upon those before us.",
+         "transliteration": "Rabbana Wala Tahmil Alaina Isran Kama Hamaltahu 'Alal-Ladheena Min Qablina.",
+         "refno": "2:286 - Al-Baqarah"
+    },
+    {
+        "id" : 7,
+        "arabic": "رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِۦ ۖ وَٱعْفُ عَنَّا وَٱغْفِرْ لَنَا وَٱرْحَمْنَآ ۚ أَنتَ مَوْلَىٰنَا فَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَـٰفِرِينَ",
+         "translation": "Our Lord, and burden us not with that which we have no ability to bear. And pardon us; and forgive us; and have mercy upon us. You are our protector, so give us victory over the disbelieving people.",
+         "transliteration": "Rabbana Wala Tuhammilna Ma La Taqata Lana Bihi Wa'fu Anna Waghfir Lana Wairhamna Anta Mawlana Fansurna 'Alal-Qawmil Kafireen.",
+         "refno": "2:286 - Al-Baqarah"
+    },
+    {
+        "id" : 8,
+        "arabic": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً ۚ إِنَّكَ أَنتَ ٱلْوَهَّابُ",
+         "translation": "Our Lord, let not our hearts deviate after You have guided us and grant us from Yourself mercy. Indeed, You are the Bestower.",
+         "transliteration": "Rabbana La Tuzigh Quloobana Ba'da Idh Hadaitana Wa Hab Lana Milladunka Rahmah Innaka Antal Wahhab.",
+         "refno": "3:8 - Ali 'Imran"
+    },
+    {
+        "id" : 9,
+        "arabic": "رَبَّنَآ إِنَّكَ جَامِعُ ٱلنَّاسِ لِيَوْمٍۢ لَّا رَيْبَ فِيهِ ۚ إِنَّ ٱللَّهَ لَا يُخْلِفُ ٱلْمِيعَادَ",
+         "translation": "Our Lord, surely You will gather the people for a Day about which there is no doubt. Indeed, Allāh does not fail in His promise.",
+         "transliteration": "Rabbana Innaka Jami'unnasi Li-Yawmil La Raiba Fi Innallaha La Yukhliful Mi'aad.",
+         "refno": "3:9 - Ali 'Imran"
+    },
+    {
+        "id" : 10,
+        "arabic": "رَبَّنَآ إِنَّنَآ ءَامَنَّا فَٱغْفِرْ لَنَا ذُنُوبَنَا وَقِنَا عَذَابَ ٱلنَّارِ",
+         "translation": "Our Lord, indeed we have believed, so forgive us our sins and protect us from the punishment of the Fire.",
+         "transliteration": "Rabbana Innana Amanna Faghfir Lana Dhunuubana Wa Qinna 'Adhaban-Naar.",
+         "refno": "3:16 - Ali 'Imran"
+    },
+    {
+        "id" : 11,
+        "arabic": "رَبَّنَآ ءَامَنَّا بِمَآ أَنزَلْتَ وَٱتَّبَعْنَا ٱلرَّسُولَ فَٱكْتُبْنَا مَعَ ٱلشَّـٰهِدِينَ",
+         "translation": "Our Lord, we have believed in what You revealed and have followed the messenger [i.e., Jesus], so register us among the witnesses [to truth].",
+         "transliteration": "Rabbana Amanna Bima Anzalta Wattaba 'Nar-Rusula Fak-Tubna Ma'ash- Shahideen.",
+         "refno": "3:53 - Ali 'Imran"
+    },
+    {
+        "id" : 12,
+        "arabic": "رَبَّنَا ٱغْفِرْ لَنَا ذُنُوبَنَا وَإِسْرَافَنَا فِىٓ أَمْرِنَا وَثَبِّتْ أَقْدَامَنَا وَٱنصُرْنَا عَلَى ٱلْقَوْمِ ٱلْكَـٰفِرِينَ",
+         "translation": "Our Lord, forgive us our sins and the excess [committed] in our affairs and plant firmly our feet and give us victory over the disbelieving people.",
+         "transliteration": "Rabbana-Ghfir Lana Dhunuubana Wa Israfana Fi Amrina Wa Thabbit Aqdamana Wansurna 'Alal Qawmil Kafireen.",
+         "refno": "3:147 - Ali 'Imran"
+    },
+    {
+        "id" : 13,
+        "arabic": "رَبَّنَا مَا خَلَقْتَ هَـٰذَا بَـٰطِلًۭا سُبْحَـٰنَكَ فَقِنَا عَذَابَ ٱلنَّارِ",
+         "translation": "Our Lord, You did not create this aimlessly; exalted are You [above such a thing]; then protect us from the punishment of the Fire.",
+         "transliteration": "Rabbana Ma Khalaqta Hadha Batila Subhanaka Faqina 'Adhaban-Naar.",
+         "refno": "3:191 - Ali 'Imran"
+    },
+    {
+        "id" : 14,
+        "arabic": "رَبَّنَآ إِنَّكَ مَن تُدْخِلِ ٱلنَّارَ فَقَدْ أَخْزَيْتَهُۥ ۖ وَمَا لِلظَّـٰلِمِينَ مِنْ أَنصَارٍ",
+         "translation": "Our Lord, indeed whoever You admit to the Fire - You have disgraced him, and for the wrongdoers there are no helpers.",
+         "transliteration": "Rabbana Innaka Man Tudkhilin Nara Faqad Akhzaytah Wa Ma Lidh-Dhalimeena Min Ansar.",
+         "refno": "3:192 - Ali 'Imran"
+    },
+    {
+        "id" : 15,
+        "arabic": "رَّبَّنَآ إِنَّنَا سَمِعْنَا مُنَادِيًۭا يُنَادِى لِلْإِيمَـٰنِ أَنْ ءَامِنُوا۟ بِرَبِّكُمْ فَـَٔامَنَّا",
+         "translation": "Our Lord, indeed we have heard a caller, calling to faith, [saying], ‘Believe in your Lord,’ and we have believed.",
+         "transliteration": "Rabbana Innana Sami'na Munadiyany-Yunadi Lil-Imani An Aminu Bi Rabbikum Fa'aamanna.",
+         "refno": "3:193 - Ali 'Imran"
+    },
+    {
+        "id" : 16,
+        "arabic": "رَبَّنَا فَٱغْفِرْ لَنَا ذُنُوبَنَا وَكَفِّرْ عَنَّا سَيِّـَٔاتِنَا وَتَوَفَّنَا مَعَ ٱلْأَبْرَارِ",
+         "translation": "Our Lord, so forgive us our sins and remove from us our misdeeds and cause us to die among the righteous.",
+         "transliteration": "Rabbana Faghfir Lana Dhunoobana Wa Kaffir 'Ana Saiyi'aatina Wa Tawaffana Ma'al Abrar.",
+         "refno": "3:193 - Ali 'Imran"
+    },
+    {
+        "id" : 17,
+        "arabic": "رَبَّنَا وَءَاتِنَا مَا وَعَدتَّنَا عَلَىٰ رُسُلِكَ وَلَا تُخْزِنَا يَوْمَ ٱلْقِيَـٰمَةِ ۗ إِنَّكَ لَا تُخْلِفُ ٱلْمِيعَادَ",
+         "translation": "Our Lord, and grant us what You promised us through Your messengers and do not disgrace us on the Day of Resurrection. Indeed, You do not fail in [Your] promise.",
+         "transliteration": "Rabbana Wa 'Atina Ma Wa'adtana 'Ala Rusulika Wa La Tukhzina Yawmal- Qiyamah Innaka La Tukhliful Mi'aad.",
+         "refno": "3:194 - Ali 'Imran"
+    },
+    {
+        "id" : 18,
+        "arabic": "رَبَّنَآ ءَامَنَّا فَٱكْتُبْنَا مَعَ ٱلشَّـٰهِدِينَ",
+         "translation": "Our Lord, we have believed, so register us among the witnesses.",
+         "transliteration": "Rabbana Aamana Faktubna Ma' Ash-Shahideen.",
+         "refno": "5:83 - Al-Ma'idah"
+    },
+    {
+        "id" : 19,
+        "arabic": "ٱللَّهُمَّ رَبَّنَآ أَنزِلْ عَلَيْنَا مَآئِدَةًۭ مِّنَ ٱلسَّمَآءِ تَكُونُ لَنَا عِيدًۭا لِّأَوَّلِنَا وَءَاخِرِنَا وَءَايَةًۭ مِّنكَ ۖ وَٱرْزُقْنَا وَأَنتَ خَيْرُ ٱلرَّٰزِقِينَ",
+         "translation": "O Allāh, our Lord, send down to us a table [spread with food] from the heaven to be for us a festival for the first of us and the last of us and a sign from You. And provide for us, and You are the best of providers.",
+         "transliteration": "Rabbana Anzil 'Alaina Ma'idatam Minas-Samai Tuknu Lana 'Idal Li-Awwa-Lina Wa Aakhirna Wa Ayatam-Minka War-Zuqna Wa Anta Khayrul-Raziqeen.",
+         "refno": "5:114 - Al-Ma'idah"
+    },
+    {
+        "id" : 20,
+        "arabic": "رَبَّنَا ظَلَمْنَآ أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ ٱلْخَـٰسِرِينَ",
+         "translation": "Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers.",
+         "transliteration": "Rabbana Zalamna Anfusina Wa Il Lam Taghfir Lana Wa Tarhamna Lana Kunan Minal-Khasireen.",
+         "refno": "7:23 - Al-A'raf"
+    },
+    
+    {
+        "id" : 21,
+        "arabic": "رَبَّنَا لَا تَجْعَلْنَا مَعَ ٱلْقَوْمِ ٱلظَّـٰلِمِينَ",
+         "translation": "Our Lord, do not place us with the wrongdoing people.",
+         "transliteration": "Rabbana La Taj'alna Ma'al Qawwmi-Dhalimeen.",
+         "refno": "7:47 - Al-A'raf"
+    },
+    {
+        "id" : 22,
+        "arabic": "رَبَّنَا ٱفْتَحْ بَيْنَنَا وَبَيْنَ قَوْمِنَا بِٱلْحَقِّ وَأَنتَ خَيْرُ ٱلْفَـٰتِحِينَ",
+         "translation": "Our Lord, decide between us and our people in truth, and You are the best of those who give decision.",
+         "transliteration": "Rabbanaf-Tah Bainana Wa Baina Qawmina Bil Haqqi Wa Anta Khairul Fatiheen.",
+         "refno": "7:89 - Al-A'raf"
+    },
+    {
+        "id" : 23,
+        "arabic": "رَبَّنَآ أَفْرِغْ عَلَيْنَا صَبْرًا وَتَوَفَّنَا مُسْلِمِينَ",
+         "translation": "Our Lord, pour upon us patience and let us die as Muslims [in submission to You].",
+         "transliteration": "Rabbana Afrigh 'Alaina Sabraw Wa Tawaffana Muslimeen.",
+         "refno": "7:126 - Al-A'raf"
+    },
+    {
+        "id" : 24,
+        "arabic": "رَبَّنَا لَا تَجْعَلْنَا فِتْنَةً لِّلْقَوْمِ ٱلظَّـٰلِمِينَ ; وَنَجِّنَا بِرَحْمَتِكَ مِنَ ٱلْقَوْمِ ٱلْكَـٰفِرِينَ",
+         "translation": "Our Lord, make us not [objects of] trial for the wrongdoing people. And save us by Your mercy from the disbelieving people.",
+         "transliteration": "Rabbana La Taj'alna Fitnatal Lil-Qawmidh-Dhalimeen Wa Najjina Bi-Rahmatika Minal Qawmil Kafireen.",
+         "refno": "10:85-86 - Yunus"
+    },
+    {
+        "id" : 25,
+        "arabic": "رَبَّنَآ إِنَّكَ تَعْلَمُ مَا نُخْفِى وَمَا نُعْلِنُ ۗ وَمَا يَخْفَىٰ عَلَى ٱللَّهِ مِن شَىْءٍۢ فِى ٱلْأَرْضِ وَلَا فِى ٱلسَّمَآءِ",
+         "translation": "Our Lord, indeed You know what we conceal and what we declare, and nothing is hidden from Allāh on the earth or in the heaven.",
+         "transliteration": "Rabbana Innaka Ta'lamu Maa Nukhfi Wa Ma Nu'lin Wa Ma Yakhfa 'Alal-Lahi Min Shai'in Fil-Ardi Wa La Fis-Sama'",
+         "refno": "14:38 - Ibrahim"
+    },
+    {
+        "id" : 26,
+        "arabic": "رَبِّ ٱجْعَلْنِى مُقِيمَ ٱلصَّلَوٰةِ وَمِن ذُرِّيَّتِى ۚ رَبَّنَا وَتَقَبَّلْ دُعَآءِ",
+         "translation": "My Lord, make me an establisher of prayer, and [many] from my descendants. Our Lord, and accept my supplication.",
+         "transliteration": "Rabbij 'Alnee Muqeemas Salaati Wa Min Zurriyyatee Rabbanaa Wa Taqabbal Du'aaa'",
+         "refno": "14:40 - Ibrahim"
+    },
+    {
+        "id" : 27,
+        "arabic": "رَبَّنَا ٱغْفِرْ لِى وَلِوَٰلِدَىَّ وَلِلْمُؤْمِنِينَ يَوْمَ يَقُومُ ٱلْحِسَابُ",
+         "translation": "Our Lord, forgive me and my parents and the believers the Day the account is established.",
+         "transliteration": "Rabbana Ghfir Li Wa Li Wallidayya Wa Lil Mu'mineena Yawma Yaqumul Hisaab.",
+         "refno": "14:41 - Ibrahim"
+    },
+    {
+        "id" : 28,
+        "arabic": "رَبَّنَآ ءَاتِنَا مِن لَّدُنكَ رَحْمَةًۭ وَهَيِّئْ لَنَا مِنْ أَمْرِنَا رَشَدًا",
+         "translation": "Our Lord, grant us from Yourself mercy and prepare for us from our affair right guidance.",
+         "transliteration": "Rabbana 'Atina Mil-Ladunka Rahmataw Wa Haiyi Lana Min Amrina Rashada.",
+         "refno": "18:10 - Al-Kahf"
+    },
+    {
+        "id" : 29,
+        "arabic": "رَبَّنَآ إِنَّنَا نَخَافُ أَن يَفْرُطَ عَلَيْنَآ أَوْ أَن يَطْغَىٰ",
+         "translation": "Our Lord, indeed we are afraid that he will hasten [punishment] against us or that he will transgress.",
+         "transliteration": "Rabbana Innana Nakhafu Ai-Yafruta 'Alaina Aw Any-Yatgha",
+         "refno": "20:45 - Taha"
+    },
+    {
+        "id" : 30,
+        "arabic": "رَبَّنَآ ءَامَنَّا فَٱغْفِرْ لَنَا وَٱرْحَمْنَا وَأَنتَ خَيْرُ ٱلرَّٰحِمِينَ",
+         "translation": "Our Lord, we have believed, so forgive us and have mercy upon us, and You are the best of the merciful.",
+         "transliteration": "Rabbana Amanna Faghfir Lana Warhamna Wa Anta Khairur Rahimiin.",
+         "refno": "23:109 - Al-Mu'minun"
+    },
+    {
+        "id" : 31,
+        "arabic": "رَبَّنَا ٱصْرِفْ عَنَّا عَذَابَ جَهَنَّمَ ۖ إِنَّ عَذَابَهَا كَانَ غَرَامًا إِنَّهَا سَآءَتْ مُسْتَقَرًّا وَمُقَامًا",
+         "translation": "Our Lord, avert from us the punishment of Hell. Indeed, its punishment is ever adhering; Indeed, it is evil as a settlement and residence.",
+         "transliteration": "Rabbanas-Rif 'Anna 'Adhaba Jahannama Inna 'Adhabaha Kana Gharama Innaha Sa'at Musta-Qarranw Wa Muqama.",
+         "refno": "25:65-66 - Al-Furqan"
+    },
+    {
+        "id" : 32,
+        "arabic": "رَبَّنَا هَبْ لَنَا مِنْ أَزْوَٰجِنَا وَذُرِّيَّـٰتِنَا قُرَّةَ أَعْيُنٍۢ وَٱجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا",
+         "translation": "Our Lord, grant us from among our wives and offspring comfort to our eyes and make us a leader for the righteous.",
+         "transliteration": "Rabbana Hablana Min Azwaajina Wadhurriy-Yatina, Qurrata 'Ayioni Wa-Jalna Lil-Muttaqeena Imaama",
+         "refno": "25:74 - Al-Furqan"
+    },
+    {
+        "id" : 33,
+        "arabic": "رَبَّنَا لَغَفُورٌ شَكُورٌ",
+         "translation": "Our Lord is Forgiving and Appreciative.",
+         "transliteration": "Rabbana La Ghafurun Shakur.",
+         "refno": "35:34 - Fatir"
+    },
+    {
+        "id" : 34,
+        "arabic": "رَبَّنَا وَسِعْتَ كُلَّ شَىْءٍۢ رَّحْمَةًۭ وَعِلْمًۭا فَٱغْفِرْ لِلَّذِينَ تَابُوا۟ وَٱتَّبَعُوا۟ سَبِيلَكَ وَقِهِمْ عَذَابَ ٱلْجَحِيمِ",
+         "translation": "Our Lord, You have encompassed all things in mercy and knowledge, so forgive those who have repented and followed Your way and protect them from the punishment of Hellfire.",
+         "transliteration": "Rabbana Wasi'ta Kulla Sha'ir Rahmatanw Wa 'Ilman Faghfir Lilladhina Tabu Wattaba'u Sabilaka Waqihim 'Adhabal-Jahiim.",
+         "refno": "40:7 - Ghafir"
+    },
+    {
+        "id" : 35,
+        "arabic": "رَبَّنَا وَأَدْخِلْهُمْ جَنَّـٰتِ عَدْنٍ ٱلَّتِى وَعَدتَّهُمْ وَمَن صَلَحَ مِنْ ءَابَآئِهِمْ وَأَزْوَٰجِهِمْ وَذُرِّيَّـٰتِهِمْ ۚ إِنَّكَ أَنتَ ٱلْعَزِيزُ ٱلْحَكِيمُ وَقِهِمُ ٱلسَّيِّـَٔاتِ ۚ وَمَن تَقِ ٱلسَّيِّـَٔاتِ يَوْمَئِذٍۢ فَقَدْ رَحِمْتَهُۥ ۚ وَذَٰلِكَ هُوَ ٱلْفَوْزُ ٱلْعَظِيمُ",
+         "translation": "Our Lord, and admit them to gardens of perpetual residence which You have promised them and whoever was righteous among their forefathers, their spouses and their offspring. Indeed, it is You who is the Exalted in Might, the Wise. And protect them from the evil consequences [of their deeds]. And he whom You protect from evil consequences that Day - You will have given him mercy. And that is the great attainment.",
+         "transliteration": "Rabbana Wa Adhkhilhum Jannati 'Adninil-Lati Wa'attahum Wa Man Salaha Min Aba'ihim Wa Azwajihim Wa Dhuriyyatihim Innaka Antal 'Azizul-Hakim, Waqihimus Saiyi'at Wa Man Taqis-Saiyi'ati Yawma'idhin Faqad Rahimatahu Wa Dhalika Huwal Fawzul-'Adheem.",
+         "refno": "40:8-9 - Ghafir"
+    },
+    {
+        "id" : 36,
+        "arabic": "رَبَّنَا ٱغْفِرْ لَنَا وَلِإِخْوَٰنِنَا ٱلَّذِينَ سَبَقُونَا بِٱلْإِيمَـٰنِ وَلَا تَجْعَلْ فِى قُلُوبِنَا غِلًّۭا لِّلَّذِينَ ءَامَنُوا۟",
+         "translation": "Our Lord, forgive us and our brothers who preceded us in faith and put not in our hearts [any] resentment toward those who have believed.",
+         "transliteration": "Rabbana-Ghfir Lana Wa Li 'Ikhwani Nalladhina Sabaquna Bil Imani Wa La Taj'al Fi Qulubina Ghillal-Lilladhina Amanu.",
+         "refno": "59:10 - Al-Hashr"
+    },
+    {
+        "id" : 37,
+        "arabic": "رَبَّنَآ إِنَّكَ رَءُوفٌ رَّحِيمٌ",
+         "translation": "Our Lord, indeed You are Kind and Merciful.",
+         "transliteration": "Rabbana Innaka Ra'ufur Rahim.",
+         "refno": "59:10 - Al-Hashr"
+    },
+    {
+        "id" : 38,
+        "arabic": "رَّبَّنَا عَلَيْكَ تَوَكَّلْنَا وَإِلَيْكَ أَنَبْنَا وَإِلَيْكَ ٱلْمَصِيرُ",
+         "translation": "Our Lord, upon You we have relied, and to You we have returned, and to You is the destination.",
+         "transliteration": "Rabbana 'Alaika Tawakkalna Wa-Ilaika Anabna Wa-Ilaikal Masir.",
+         "refno": "60:4 - Al-Mumtahanah"
+    },
+    {
+        "id" : 39,
+        "arabic": "رَبَّنَا لَا تَجْعَلْنَا فِتْنَةً لِّلَّذِينَ كَفَرُوا۟ وَٱغْفِرْ لَنَا رَبَّنَآ ۖ إِنَّكَ أَنتَ ٱلْعَزِيزُ ٱلْحَكِيمُ",
+         "translation": "Our Lord, make us not [objects of] torment for the disbelievers and forgive us, our Lord. Indeed, it is You who is the Exalted in Might, the Wise.",
+         "transliteration": "Rabbana La Taj'alna Fitnatal Lilladhina Kafaru Waghfir Lana Rabbana Innaka Antal 'Azizul-Hakim.",
+         "refno": "60:5 - Al-Mumtahanah"
+    },
+    {
+        "id" : 40,
+        "arabic": "رَبَّنَآ أَتْمِمْ لَنَا نُورَنَا وَٱغْفِرْ لَنَآ ۖ إِنَّكَ عَلَىٰ كُلِّ شَىْءٍۢ قَدِيرٌ",
+         "translation": "Our Lord, perfect for us our light and forgive us. Indeed, You are over all things competent.",
+         "transliteration": "Rabbana Atmim Lana Nurana Waighfir Lana Innaka 'Ala Kulli Shai-In Qadir.",
+         "refno": "66:8 - At-Tahrim"
     }
+
 ]
