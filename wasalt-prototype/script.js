@@ -2,19 +2,6 @@ let items = document.querySelectorAll('.top-picks button');
 let selectedItem = document.querySelector('.selected-item');
 
 
-let data = {
-    "propertyTitle" : "فيلا للبيع الربوة ، الرياض",
-    "price" : "6,950,000",
-    "sar": "ر.س",
-    "address" : "الربوة، وسط الرياض، الرياض",
-    "bathroom" : '3',
-    "bedroom" : '2',
-    "area": '700',
-    "whatsapp": '+966566655559',
-    "call": '+966566655559'
-
-}
-
 items.forEach(function(item, index){
     item.addEventListener('click', function(e){
         // let imgurl = e.target.getAttribute('src');
@@ -79,18 +66,22 @@ function handleTouchMove(evt) {
     if (xDiff > 0) {
         if(document.querySelector('body').classList.contains('slide1')) {
             document.querySelector('.image-slider').classList.add('moveLeft');
+            document.querySelector('.tik').style.opacity = "0";
         }
         if(document.querySelector('body').classList.contains('slide2')) {
             document.querySelector('.image-slider').classList.add('moveLeft');
+            document.querySelector('.tik').style.opacity = "0";
         }
         console.log("left");
     } else {
         console.log("right");
         if(document.querySelector('body').classList.contains('slide1')) {
             document.querySelector('.image-slider').classList.remove('moveLeft');
+            document.querySelector('.tik').style.opacity = "1";
         }
         if(document.querySelector('body').classList.contains('slide2')) {
             document.querySelector('.image-slider').classList.remove('moveLeft');
+            document.querySelector('.tik').style.opacity = "1";
         }
     }
   } else {
