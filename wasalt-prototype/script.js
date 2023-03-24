@@ -136,5 +136,6 @@ document.querySelector('#close').addEventListener('click', function() {
     document.querySelector('#img1').style.animation = "none";
     document.querySelector('#img2').style.animation = "none";
     document.querySelector('.tik').style.opacity = "0";
+    document.querySelector('#close').style.opacity = "0";
     
   })
